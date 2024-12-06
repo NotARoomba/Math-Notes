@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{mhchem}
+\usepackage{chemfig}
+\begin{document}
+% \title{Chemistry}
+% \author{Nathan Alspaugh}
+% Hello world
+Isomeros son un tipo de radical que se forma por la reorganización de los átomos en una molécula. Los isómeros son moléculas que tienen la misma fórmula molecular, pero diferente estructura. Los isómeros se pueden clasificar en dos tipos: isómeros estructurales y isómeros espaciales. Los isómeros estructurales son moléculas que tienen la misma fórmula molecular, pero diferente estructura.
+
+\subsection*{Ejemplo con \ce{CH12}}
+
+\begin{itemize}
+    \item \chemfig{\ce{CH3}(~[6]HCl)-\ce{CH2}-\ce{CH2}-\ce{CH2}-\ce{CH3}}, Pentano
+    \item \chemfig{\ce{CH3}-\ce{CH2}-\ce{CH2}-\ce{CH}(-[6]\ce{CH3})-\ce{CH3}}, 2-Metilbutano
+    \item \chemfig{\ce{C}(-[2]\ce{CH3})(-[4]\ce{CH3})(-[6]\ce{CH3})(-[8]\ce{CH3})}, 2,2-Dimetilpropano
+    \end{itemize}
+    \qquad
+    \subsection*{Ejemplo con \ce{C23H48}}
+    \chemfig{\ce{CH3}-\ce{CH}(-[6]\ce{CH3})-\ce{CH2}-C(-[2]\ce{CH3})(-[6]\ce{CH3})-\ce{CH2}-C(-[6]\ce{CH2}(-[6]\ce{CH3}))-\ce{CH2}-\ce{CH2}-\ce{CH}(-[2]\ce{CH2}(-[2]\ce{CH3}))-\ce{CH2}-\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH3}))))-\ce{CH3}}, 6,9-Dietil-2,4,4,11-Tetrametilpentadecano
+    \qquad
+\subsection*{Ejemplo con diagrama ramificada}
+\chemfig{.-[1].-[7].(-[6].)-[1].-[7].(-[6].)-[1].-[7].(-[6].(-[7].))-[1].-[7].}
+3-Ethyl-5,7-DimethylNonane (3-Etil-5,7-Dimetilnonano)
+\quad
+Notes: Start numbering from the side closest to the first branch, if the 2 1st branches are at the same distance, try the second farthest branch. If all the branches are the same distance form the ends, try alphabetically. In this example you would start from the right and then go to the left because the 1st and 2nd distanced branches are the sam for both sides and then you start alphabetically which would be Ethyl from the right.
+
+\end{document}
