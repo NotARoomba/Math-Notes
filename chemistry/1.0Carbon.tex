@@ -74,13 +74,38 @@ Examples:
 The ramified alcalines are a more complex form of alcalines with carbon. The naming is more complicated and it is done by the number of atoms in the longest chain and then the number of atoms in the branches. The branches are named by the number of atoms and then the position in the chain. For example, 2-Methylbutane has 4 carbon atoms in the longest chain and 1 carbon atom in the branch in the 2nd position.
 
 \begin{center}
-    \chemfig{\ce{CH3}-\ce{CH2}-\ce{CH2}-\ce{CH}(-[6]\ce{CH3})-\ce{CH3}}
+    \chemname{\chemfig{\ce{CH3}-\ce{CH2}-\ce{CH2}-\ce{CH}(-[6]\ce{CH3})-\ce{CH3}}}{2-Methylbutane (2-Metilbutano)}
 \label{fig:2-Methylbutane}
 \end{center}
 
+\paragraph*{Nomenclature of ramified alcalines}
+\begin{center}
+    \chemname{\chemfig{\ce{CH3}-\ce{CH}(-[6]\ce{CH3})-\ce{CH2}-CH(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH3})))-\ce{CH2}-\ce{CH}(-[6]\ce{CH3})-\ce{CH3}}}{2,6-Dimethyl-4-Propylheptane (2,6-Dimetil-4-Propilheptano)}
+\end{center}
+
+\subsubsection{Substitutions}
+
+The substitutions are the atoms that are not carbon or hydrogen. They are named by the number of atoms and then the position in the chain. For example, 2-Chloroethane has 2 carbon atoms and 1 chlorine atom in the 2nd position. The substitutions are halogens and are made up of:
+\begin{itemize}
+    \item Flourine (Fluoro)
+    \item Chlorine (Cloro)
+    \item Bromine (Bromo)
+    \item Iodine (Yodo)
+\end{itemize}
+
+\paragraph{Nomenclature of substitutions (haloalkanes) (haloalcanos)}
+\begin{center}
+    \chemname{\chemfig{\ce{CH3}-\ce{CH}(-[6]\ce{Cl})-\ce{CH2}-C(-[2]\ce{Br})(-[6]\ce{Br})-\ce{CH2}-C(-[6]\ce{CH2}(-[6]\ce{CH3}))-\ce{CH2}-\ce{CH2}-\ce{CH3}}}{4,4-Dibromine-2-Chlorine-6-Ethylnonane (4,4-Dibromo-2-Cloro-6-Etilnonano)}
+    \end{center}
+    \begin{center}
+        \chemname{\chemfig{.-[7].-[1].(-[2]\ce{Cl})-[7].(-[6].(-[5].))-[1].-[7].-[1].-[7].(-[6].(-[5].)(-[7].))-[1].-[7].-[1].-[7]}}{3-Chlorine-4-Ethyl-8-Isopropyldodecane (3-Cloro-4-Etil-8-Isopropildodecano)
+    \end{center}
+    \quad
+    Note that there is a secondary carbon in the 8th position so the naming includes the prefix iso.
+    \quad
+The nomenclature of substitutions is the same where we first find the longest chain and then the branch with that is the shortest distance from the end. Always start the naming with the subsitutions and they are in alphabetical order. If like in the second figure there is a secondary branch, a prefix is added like iso, neo, or sec.
 \subsection{Isomeros}
 Isomeros son un tipo de radical que se forma por la reorganización de los átomos en una molécula. Los isómeros son moléculas que tienen la misma fórmula molecular, pero diferente estructura. Los isómeros se pueden clasificar en dos tipos: isómeros estructurales y isómeros espaciales. Los isómeros estructurales son moléculas que tienen la misma fórmula molecular, pero diferente estructura.
-
 \subsection*{Ejemplo con \ce{CH12}}
 
 \begin{itemize}
@@ -90,11 +115,12 @@ Isomeros son un tipo de radical que se forma por la reorganización de los átom
     \end{itemize}
     \qquad
     \subsection*{Ejemplo con \ce{C23H48}}
-    \chemfig{\ce{CH3}-\ce{CH}(-[6]\ce{CH3})-\ce{CH2}-C(-[2]\ce{CH3})(-[6]\ce{CH3})-\ce{CH2}-C(-[6]\ce{CH2}(-[6]\ce{CH3}))-\ce{CH2}-\ce{CH2}-\ce{CH}(-[2]\ce{CH2}(-[2]\ce{CH3}))-\ce{CH2}-\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH3}))))-\ce{CH3}}, 6,9-Dietil-2,4,4,11-Tetrametilpentadecano
+    \chemname{\chemfig{\ce{CH3}-\ce{CH}(-[6]\ce{CH3})-\ce{CH2}-C(-[2]\ce{CH3})(-[6]\ce{CH3})-\ce{CH2}-C(-[6]\ce{CH2}(-[6]\ce{CH3}))-\ce{CH2}-\ce{CH2}-\ce{CH}(-[2]\ce{CH2}(-[2]\ce{CH3}))-\ce{CH2}-\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH2}(-[6]\ce{CH3}))))-\ce{CH3}}}{6,9-Dietil-2,4,4,11-Tetrametilpentadecano}
     \qquad
 \subsection*{Ejemplo con diagrama ramificada}
-\chemfig{.-[1].-[7].(-[6].)-[1].-[7].(-[6].)-[1].-[7].(-[6].(-[7].))-[1].-[7].}
-3-Ethyl-5,7-DimethylNonane (3-Etil-5,7-Dimetilnonano)
-\quad
-Notes: Start numbering from the side closest to the first branch, if the 2 1st branches are at the same distance, try the second farthest branch. If all the branches are the same distance form the ends, try alphabetically. In this example you would start from the right and then go to the left because the 1st and 2nd distanced branches are the sam for both sides and then you start alphabetically which would be Ethyl from the right.
+\begin{center}
+    \chemname{\chemfig{.-[1].-[7].(-[6].)-[1].-[7].(-[6].)-[1].-[7].(-[6].(-[7].))-[1].-[7].}}{3-Ethyl-5,7-DimethylNonane (3-Etil-5,7-Dimetilnonano)}
+\end{center}
+Start numbering from the side closest to the first branch, if the 2 1st branches are at the same distance, try the second farthest branch. If all the branches are the same distance form the ends, try alphabetically. In this example you would start from the right and then go to the left because the 1st and 2nd distanced branches are the sam for both sides and then you start alphabetically which would be Ethyl from the right.
+
 

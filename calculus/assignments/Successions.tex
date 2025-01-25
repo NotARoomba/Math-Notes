@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}  
+\usepackage{titling} 
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern,textcomp} 
+\usepackage[super]{nth}
+
+\pgfplotsset{compat=newest}
+
+\title{Actividad en Clase \\ Succesiones y Progresiones}
+\author{Nathan Alspaugh y Gabriela Cortes \\ Colegio Real Royal School}
+
+\begin{document}
+\maketitle
+\newtheorem{successions}{Problema}
+\begin{successions}
+   Determina el \nth{7} termino de 200, 100, 50\dots
+   \begin{equation}
+         \begin{aligned}
+              & a_{n} = a_{1} * r{n-1} \\
+                & a_{7} = 200 * \bigg(\frac{1}{2}\bigg)^{6} \\
+                & a_{7} = 200 * \dfrac{1}{2^6} \\
+                & a_{7} = \frac{200}{64} \\
+                & a_{7} = \frac{25}{8} \\
+         \end{aligned}
+   \end{equation}
+\end{successions}
+\begin{successions}
+    Determina el razon si el \nth{1} termino es \(\frac{3}{5}\) y el \nth{5} termino es \(\frac{1}{135}\)
+    \begin{equation}
+        \begin{aligned}
+            & r = \sqrt[n-1]{\frac{a_{n}}{a_{1}}} \\
+            & r = \sqrt[4]{\frac{\frac{1}{135}}{\frac{3}{8}}} \\
+            & r = \sqrt[4]{\frac{8}{405}} \\
+            & r = \sqrt[4]{\frac{1}{81}} \\
+            & r = \frac{1}{3} \\
+        \end{aligned}
+    \end{equation}
+\end{successions}
+\begin{successions}
+    Determina el numero de terminos de -2, -6, ..., -162
+    \begin{equation}
+        \begin{aligned}
+            & n = \frac{\log{n} - \log{a_{1}} + \log{r}}{\log{r}}; && r = \frac{a_{n}}{a_{n-1}} \\
+            & n = \frac{\log{-162} - \log{-2} + \log{3}}{\log{3}} && r = \frac{-6}{-2} = 3 \\
+            & n = \frac{\log{-162} - \log{-2} + \log{3}}{\log{3}} \\
+            & n = 5
+        \end{aligned}
+    \end{equation}
+\end{successions}
+\begin{successions}
+    Encuentra la suma de los primeros 9 terminos de -5, 10, -20\dots
+    \begin{equation}
+        \begin{aligned}
+            & S_{n} = \frac{a_{1}(1 - r^{n})}{1 - r} && r = \frac{a_{n}}{a_{n-1}}  \\
+            & S_{9} = \frac{-5(1 - (-2)^{9})}{1 - (-2)} && r = \frac{10}{-5} = -2 \\
+            & S_{9} = \frac{-5(1 + 512)}{1 + 2} \\
+            & S_{9} = \frac{-5(513)}{3} \\
+            & S_{9} = \frac{-2565}{3} \\
+            & S_{9} = -855
+        \end{aligned}
+    \end{equation}
+\end{successions}
+
+\end{document}
