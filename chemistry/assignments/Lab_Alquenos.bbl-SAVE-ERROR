@@ -1,0 +1,73 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{tensile-test:2012}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.engineeringarchives.com/les_mom_tensiletest.html}}
+      \field{note}{Accessed: 2020-03-16}
+      \field{title}{Tensile Test}
+      \field{year}{2012}
+    \endentry
+    \entry{matlab:2020}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={MathWorks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Natick, Massachusetts, USA}%
+      }
+      \list{publisher}{1}{%
+        {MathWorks}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{entrysubtype}{Computer software}
+      \field{title}{\texttt{MATLAB}}
+      \field{version}{9.9; R2020b}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/products/matlab.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/products/matlab.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

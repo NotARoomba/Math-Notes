@@ -1,0 +1,334 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+
+
+\geometry{a4paper, margin=1in}
+\doublespacing
+\title{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}
+\author{Juan Andrés Del Toro R, Nathan Alspaugh y Juan Pablo Ortiz \\ Medioambiente, Colegio Real Royal School \\ 11 Grado \\ Lic. Corina Corpas Santofimio \\ 2025}
+\date{}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LO,CE]{\textbf{AquaSolar:  Sistema de Riego Sostenible para Huertas
+      }}
+\fancyhead[RO,RO]{\thepage}
+\maketitle
+
+\newpage
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\titleformat{\section} % Command to modify
+{\normalfont\Large\bfseries} % Font style for the section title
+{\thesection} % Section number (optional)
+{0pt} % Space between number and title
+{} % Code before the title (optional)
+
+% Customize subsection formatting
+\titleformat{\subsection} % Command to modify
+{\normalfont\large\bfseries} % Font style for the subsection title
+{\thesubsection} % Subsection number (optional)
+{1em} % Space between number and title
+{} % Code before the title (optional)
+
+% Customize subsubsection formatting
+\titleformat{\subsubsection} % Command to modify
+{\normalfont\normalsize\bfseries} % Font style for the subsubsection title
+{\thesubsubsection} % Subsubsection number (optional)
+{2em} % Space between number and title
+{} % Code before the title (optional)
+\renewcommand{\contentsname}{Tabla de Contenido}
+\tableofcontents
+
+
+\newpage
+\section*{Resumen}
+AquaSolar es un proyecto que tiene como objetivo diseñar e implementar un sistema de riego sostenible para huertas, aprovechando la energía solar a través de paneles fotovoltaicos. Su propósito es optimizar el uso del agua y reducir el impacto ambiental, gestionando eficientemente la energía solar para automatizar el riego y minimizar el desperdicio de recursos. El proyecto se centrará en desarrollar una estructura económica y ecológica, integrar un controlador automático para optimizar el riego y evaluar la eficiencia del sistema.
+
+La metodología incluye la planificación y mejora del sistema de riego actual, involucrando al club de ecología para fomentar la educación ambiental. Los resultados esperados incluyen una mejora en la gestión del agua y un modelo replicable en otras instituciones educativas, promoviendo la sostenibilidad.
+\newpage
+\section*{Abstract}
+AquaSolar is a project aimed at designing and implementing a sustainable irrigation system for gardens, utilizing solar energy through photovoltaic panels. Its purpose is to optimize water usage and reduce environmental impact by efficiently managing solar energy to automate irrigation and minimize resource waste. The project will focus on developing an economical and eco-friendly structure, integrating an automatic controller to optimize irrigation, and evaluating the system's efficiency.
+
+The methodology includes planning and improving the current irrigation system, involving the ecology club to promote environmental education. The expected outcomes include improved water management and a replicable model for other educational institutions, promoting sustainability.
+\newpage
+\section{Justificación}
+El proyecto tiene como objetivo diseñar e implementar un sistema de riego automático alimentado por energía solar en huertas educativas. Este sistema buscará optimizar el uso del agua y reducir el impacto ambiental mediante el aprovechamiento de energías renovables. La integración de paneles solares permitirá automatizar el riego de manera eficiente, ajustándose a las necesidades específicas de cada huerta y minimizando el desperdicio de recursos. Además, se buscará involucrar a los estudiantes en el proceso, sensibilizándolos sobre la importancia de la sostenibilidad y fomentando prácticas ecológicas que promuevan el uso responsable de los recursos naturales.
+
+El sistema no solo mejorará la eficiencia del riego, sino que también servirá como un modelo replicable para otras instituciones educativas. Así, se espera generar una mayor conciencia ambiental entre los estudiantes y la comunidad educativa, promoviendo el compromiso con la conservación del medio ambiente.
+\newpage
+\section{Introducción}
+La sostenibilidad es una necesidad urgente, y el aprovechamiento de energías renovables es clave para la preservación del medio ambiente. Agua y energía son recursos esenciales, pero limitados y vulnerables al uso ineficiente. En este contexto, el proyecto AquaSolar busca optimizar el riego de huertas escolares mediante energía solar fotovoltaica, reduciendo el consumo de agua, la dependencia de fuentes convencionales y fomentando la educación ambiental.
+
+Desde el descubrimiento del efecto fotovoltaico en 1839 por Alexandre-Edmond Becquerel hasta los avances actuales en tecnología solar, la energía fotovoltaica ha demostrado ser una herramienta eficiente en la agricultura, permitiendo el riego sin afectar negativamente los ecosistemas. Su aplicación en sistemas de riego ha demostrado reducir el desperdicio de agua hasta en un 30\%, promoviendo una gestión más eficiente y sustentable.
+
+El sistema automatizado de riego no solo conservará agua y reducirá el impacto ambiental, sino que también será un modelo replicable en otras instituciones. Al eliminar el uso de electricidad derivada de combustibles fósiles, se disminuye la huella de carbono y se contribuye a la mitigación del cambio climático. Además, un riego eficiente protege la biodiversidad del suelo y evita la sobreexplotación de acuíferos, asegurando la sostenibilidad a largo plazo de los ecosistemas agrícolas.
+
+La implementación de AquaSolar permitirá a los estudiantes interactuar directamente con un sistema de riego automatizado, comprendiendo cómo la energía solar puede utilizarse para optimizar recursos en la agricultura. A través de su participación en la instalación y monitoreo del sistema, adquirirán conocimientos prácticos sobre energías renovables y sostenibilidad, fortaleciendo su conciencia ambiental y su capacidad para aplicar soluciones innovadoras en su entorno.
+\newpage
+\section{Planteamiento del problema}
+\subsection{Tema}
+Diseño e Implementación de un Sistema de Riego Sostenible para Huertas, Utilizando Energía Solar para Maximizar la Eficiencia en el Uso del Agua y Reducir el Impacto Ambiental.
+
+\subsection{Pregunta Problema}
+¿Cómo aprovechar de manera eficiente la energía solar para automatizar el riego en huertas, maximizando el uso del agua y reduciendo los costos operativos, mientras se minimiza el impacto ambiental?
+\newpage
+\section{Objetivos}
+\subsection{Objetivo General}
+Diseñar e implementar un sistema de riego automatizado para huertas, alimentado por energía solar, con el propósito de optimizar el uso del agua, reducir el consumo de energía y promover prácticas agrícolas sostenibles.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+      \item Desarrollar un controlador automático de riego que ajuste la cantidad y frecuencia del agua de acuerdo con las necesidades específicas de las plantas.
+      \item Integrar paneles fotovoltaicos para alimentar el sistema de riego, disminuyendo la huella de carbono y la dependencia de energías no renovables.
+      \item Medir la eficiencia del sistema en términos de ahorro de agua y energía, evaluando su viabilidad económica para la institución.
+      \item Fomentar la sostenibilidad ambiental y la educación sobre energías renovables, estableciendo un modelo replicable para otras huertas educativas.
+\end{itemize}
+\newpage
+\section{Marco Teórico}
+\subsection{Introducción al Riego Sostenible}
+El riego sostenible se refiere al uso racional del agua, con el objetivo de minimizar su desperdicio y reducir el impacto ambiental. En este proyecto, la energía solar es utilizada para implementar un sistema de riego automatizado en huertas escolares, promoviendo el ahorro de recursos y contribuyendo a la educación ambiental de los estudiantes.
+
+\subsection{Conceptos Clave}
+\begin{itemize}
+      \item \textbf{Energía Solar}: Obtenida a través de paneles fotovoltaicos, convierte la luz solar en electricidad, lo cual permite una fuente de energía renovable y libre de emisiones para el riego.
+      \item \textbf{Automatización del riego}: Uso de sensores y controladores, específicamente el Arduino Nano, para gestionar el suministro de agua, ajustándose a las necesidades del cultivo y reduciendo así el consumo hídrico.
+      \item \textbf{Sostenibilidad Ambiental}: Incluye prácticas que conservan los recursos naturales y reducen la dependencia de fuentes no renovables, fundamentales en este proyecto al utilizar energía solar para reducir la huella de carbono.
+\end{itemize}
+
+\subsection{Revisión de Literatura y Teorías Aplicadas}
+\begin{itemize}
+      \item \textbf{Desarrollo Sostenible} \cite{Brundtland1987}: Sostiene la importancia de prácticas que protejan los recursos para futuras generaciones, respaldando el uso de tecnologías sostenibles.
+      \item \textbf{Gestión Integrada de Recursos Hídricos} \cite{GWP2000}: Aboga por un uso eficiente y renovable del agua, base para aplicar energía solar en riego automatizado.
+      \item \textbf{Campbell et al. (2018)}: Proveen métodos de evaluación de sistemas solares de riego, útiles para medir el ahorro hídrico y energético.
+      \item \textbf{IRENA (2019)}: Expone cómo el riego solar apoya los Objetivos de Desarrollo Sostenible, al reducir emisiones y optimizar recursos.
+      \item \textbf{Varela-Cristobo et al. (2019)}: Destacan los beneficios educativos y ambientales de sistemas de riego solares en colegios, relevantes para este proyecto.
+\end{itemize}
+
+\subsection{Metodología de Recopilación y Evaluación de Datos}
+El sistema de riego fue evaluado mediante la recopilación de datos sobre el consumo de agua y la energía producida por los paneles solares, utilizando sensores de flujo y medidores de generación fotovoltaica. Estos métodos se fundamentan en los estudios de \cite{Campbell2018} e \cite{IRENA2019}, que brindan un marco metodológico para medir la eficiencia de sistemas solares en entornos educativos. Además, el impacto sobre la conciencia ambiental de los estudiantes se mide a través de encuestas y análisis cualitativos, siguiendo el enfoque de \cite{Varela2019}.
+
+\subsection{Materiales y Componentes del Sistema}
+Para la implementación del sistema de riego sostenible, se utilizaron los siguientes materiales y componentes:
+\begin{itemize}
+      \item Controlador de carga: Regula la carga y descarga de la batería desde el panel solar, evitando sobrecargas y descargas profundas que puedan dañarla.
+      \item Panel solar: Convierte la energía solar en electricidad para alimentar el sistema o cargar la batería.
+      \item Arduino Nano: Microcontrolador pequeño y versátil que permite programar y controlar los diferentes dispositivos del sistema.
+      \item Driver de motor: Permite controlar motores de corriente continua o paso a paso desde el Arduino, manejando la potencia adecuada para su funcionamiento.
+      \item Inversor Truper - 200W: Convierte la corriente continua (DC) de la batería en corriente alterna (AC) para alimentar dispositivos que requieran este tipo de energía.
+      \item Electroválvula: Controla el flujo de líquidos o gases mediante señales eléctricas, útil en sistemas de riego automatizado o control de fluidos.
+      \item Caja IP-65: Caja de protección resistente al polvo y al agua, ideal para alojar los componentes electrónicos en entornos exteriores o húmedos.
+      \item Protoboard: Placa de conexiones que permite prototipar circuitos electrónicos sin necesidad de soldar.
+      \item Batería 12V 5Ah/20HR: Fuente de almacenamiento de energía que suministra corriente al sistema cuando no hay suficiente luz solar.
+\end{itemize}
+
+\subsection{Marco Conceptual y Pregunta de Investigación}
+Se basa en tres conceptos centrales: eficiencia energética, gestión del agua, y educación ambiental.
+\begin{itemize}
+      \item \textbf{Eficiencia Energética}: Utilizando paneles solares, se minimiza el uso de fuentes convencionales de energía, reduciendo tanto las emisiones de carbono como los costos, lo que hace viable la replicación del sistema en otros contextos educativos.
+      \item \textbf{Gestión del Agua}: Mediante sensores, el sistema ajusta el riego según las necesidades del cultivo, optimizando el uso del agua y evitando desperdicios. Esto contribuye a la sostenibilidad al promover el riego de precisión.
+      \item \textbf{Educación Ambiental}: El proyecto involucra a estudiantes, fomentando su conciencia ecológica y mostrando de forma práctica el valor de las energías renovables y el manejo responsable de recursos.
+\end{itemize}
+
+Este enfoque no solo garantiza la sostenibilidad y eficiencia, sino que también potencia el aprendizaje y la adopción de prácticas ambientales responsables.
+\newpage
+\section{Metodología}
+\subsection{Actividad \#1}
+La primera actividad se enfocará en la planificación y en el esquema de un sistema de riego mediante tubos plásticos reutilizados en una huerta específica, con miras a una futura integración con paneles solares para una mayor eficiencia energética y sostenibilidad. Este proceso comprenderá varias etapas clave. En primer lugar, se llevará a cabo la preparación del terreno para la instalación del sistema de riego, asegurando que esté listo para recibir la infraestructura necesaria. Posteriormente, se realizará un análisis detallado del área de la huerta junto con las medidas correspondientes para determinar la distribución óptima del sistema y su distribución. Este análisis considerará factores críticos como la topografía del terreno, los tipos de cultivos presentes y sus necesidades específicas de riego.
+
+\subsection{Actividad \#2}
+La actividad del proyecto consiste en reformar el sistema de riego en la huerta escolar. La idea es reemplazar los tubos existentes por unos más pequeños, lo que aumentará la presión del agua al disminuir el volumen que debe ser distribuido. Además, se planea utilizar tornillos como aspersores, instalándose de manera que el agua que fluya por los tubos choque con ellos y se disperse, creando así un sistema de riego más eficiente.
+
+Durante este proceso de reforma, se pretende involucrar al club de ecología de primaria. Su participación sería doble: por un lado, podrían acompañar el proceso de reforma para aprender de primera mano sobre el tema y cómo se lleva a cabo. Por otro lado, se les instruirá acerca de los principios detrás de la reforma del sistema de riego, explicándoles cómo los cambios propuestos pueden contribuir a un uso más eficiente del agua y a una mejor gestión de recursos en la huerta escolar.
+Además de la participación activa del club de ecología, se planea llevar a cabo encuestas entre sus miembros para medir su conocimiento sobre el tema antes y después de la reforma del sistema de riego. Esto permitirá evaluar el impacto de la actividad en su comprensión y conciencia ambiental, así como identificar áreas que requieran mayor énfasis en futuras actividades educativas.
+
+\subsection{Desarrollo del sistema}
+\subsubsection{Diseño del Sistema}
+Se diseñará un sistema de riego automatizado utilizando energía solar como fuente principal. El sistema regará las plantas dos veces al día, a las 7:00 a.m. y a las 6:00 p.m., durante un periodo de 5 minutos cada vez. Los componentes estarán protegidos en una caja IP-65, asegurando resistencia al agua y al polvo.
+
+\subsubsection{Montaje del Sistema Eléctrico}
+\begin{itemize}
+      \item \textbf{Conexión del panel solar y la batería}: El panel solar se conectará a la batería de 12V para garantizar su carga durante el día. Se recomienda utilizar un diodo en serie para evitar que la corriente vuelva al panel durante la noche.
+      \item \textbf{Alimentación del Arduino Nano}: El Arduino Nano será alimentado directamente desde la batería a través del pin VIN o mediante un regulador de voltaje para obtener 5V. El Arduino será el encargado de controlar la apertura y cierre de la electroválvula según el horario programado.
+      \item \textbf{Control de la electroválvula}: La electroválvula será controlada a través de un driver de motor, que manejará el voltaje y la corriente adecuados para su funcionamiento. El Arduino enviará señales al driver para activar la electroválvula en los horarios especificados.
+\end{itemize}
+
+\subsubsection{Programación del Arduino Nano}
+El Arduino Nano será programado para abrir y cerrar la electroválvula de forma automática a las horas definidas.
+
+\subsubsection{Montaje del Sistema de Riego}
+\begin{itemize}
+      \item Instalación de la electroválvula en la tubería del sistema de riego para controlar el flujo de agua.
+      \item Conexión de mangueras para distribuir el agua desde la electroválvula hasta las plantas.
+      \item Protección del sistema: Todos los componentes electrónicos (Arduino, driver de motor, batería) deben ser colocados en la caja IP-65 para protegerlos de las condiciones ambientales externas.
+\end{itemize}
+\newpage
+\section{Encuesta}
+Encuesta sobre la Energía Solar, desarrollada con miembros del Club de Ecología de Primaria, como parte de la segunda actividad realizada.
+
+\subsection{Resultados}
+\begin{itemize}
+      \item \textbf{Total de miembros encuestados}: 10 niños
+      \item \textbf{¿Sabes qué es la energía renovable?}
+            \begin{itemize}
+                  \item Sí: 7 niños
+                  \item No: 3 niños
+                  \item Respuesta común (Sí): "Es la energía que se obtiene de fuentes naturales que no se agotan, como el sol y el viento."
+            \end{itemize}
+      \item \textbf{¿Se utiliza energía renovable en tu hogar?}
+            \begin{itemize}
+                  \item Sí: 2 niños
+                  \item No: 5 niños
+                  \item No estoy seguro: 3 niños
+                  \item Respuesta común (No estoy seguro): "Creo que no tenemos paneles solares en casa."
+            \end{itemize}
+      \item \textbf{¿Los paneles solares requieren mantenimiento regular?}
+            \begin{itemize}
+                  \item Sí: 6 niños
+                  \item No: 1 niño
+                  \item No estoy seguro: 3 niños
+                  \item Respuesta común (Sí): "Creo que sí, pero no sé exactamente qué tipo de mantenimiento necesitan."
+            \end{itemize}
+      \item \textbf{¿Es la energía solar una fuente de energía renovable?}
+            \begin{itemize}
+                  \item Sí: 10 niños
+                  \item No: 0 niños
+                  \item Respuesta común (Sí): "Sí, porque viene del sol y el sol nunca se acaba."
+            \end{itemize}
+      \item \textbf{¿Los paneles solares convierten la luz solar en electricidad?}
+            \begin{itemize}
+                  \item Sí: 10 niños
+                  \item No: 0 niños
+                  \item Respuesta común (Sí): "Sí, eso es lo que hacen los paneles solares."
+            \end{itemize}
+      \item \textbf{¿Se puede almacenar la energía solar para su uso posterior?}
+            \begin{itemize}
+                  \item Sí: 8 niños
+                  \item No: 0 niños
+                  \item No estoy seguro: 2 niños
+                  \item Respuesta común (Sí): "Sí, en baterías especiales que guardan la energía para usarla después."
+            \end{itemize}
+      \item \textbf{¿Es la energía solar una alternativa más limpia a los combustibles fósiles?}
+            \begin{itemize}
+                  \item Sí: 9 niños
+                  \item No: 0 niños
+                  \item No estoy seguro: 1 niño
+                  \item Respuesta común (Sí): "Sí, porque no contamina como el petróleo o el carbón."
+            \end{itemize}
+      \item \textbf{¿Pueden los sistemas solares ayudar a reducir las facturas de energía?}
+            \begin{itemize}
+                  \item Sí: 8 niños
+                  \item No: 1 niño
+                  \item No estoy seguro: 1 niño
+                  \item Respuesta común (Sí): "Sí, porque puedes usar la energía del sol en lugar de pagar por la electricidad."
+            \end{itemize}
+      \item \textbf{¿Es costosa la instalación de paneles solares?}
+            \begin{itemize}
+                  \item Sí: 7 niños
+                  \item No: 1 niño
+                  \item No estoy seguro: 2 niños
+                  \item Respuesta común (Sí): "He oído que sí, al principio es cara, pero luego ahorras dinero."
+            \end{itemize}
+      \item \textbf{¿Es la energía solar una fuente inagotable?}
+            \begin{itemize}
+                  \item Sí: 10 niños
+                  \item No: 0 niños
+                  \item Respuesta común (Sí): "Sí, porque el sol siempre estará ahí."
+            \end{itemize}
+\end{itemize}
+
+\subsection{Conclusión de la Encuesta}
+Los 10 niños del Club de Ecología de primaria tienen un conocimiento básico sobre la energía solar y las energías renovables. La mayoría sabe que la energía solar es una fuente inagotable y limpia, y entienden que los paneles solares convierten la luz del sol en electricidad. Aunque no todos están seguros si en sus hogares se utiliza energía renovable, reconocen los beneficios económicos y ambientales de la energía solar. Además, son conscientes de que los paneles solares requieren algún tipo de mantenimiento y que su instalación puede ser costosa inicialmente.
+
+\begin{center}
+      \includegraphics[width=0.5\textwidth]{imagenes/graph.png}
+\end{center}
+\newpage
+\nocite{*}
+\bibliography{referencias}  % Sin la extensión .bib
+\bibliographystyle{apacite} % Estilo APA
+\newpage
+\section{Anexos}
+
+\subsection{Logo}
+\begin{center}
+      \includegraphics[width=0.5\textwidth]{imagenes/logo.png}
+\end{center}
+
+\subsection{Actividades}
+\begin{itemize}
+      \item \textbf{Preparación del terreno para la instalación del sistema de riego.}
+            \begin{center}
+                  \includegraphics[width=0.5\textwidth]{imagenes/actividad1.jpg}
+            \end{center}
+
+      \item \textbf{Reforma del sistema de riego en la huerta escolar.}
+            \begin{center}
+                  \includegraphics[width=0.5\textwidth]{imagenes/actividad2.jpg}
+            \end{center}
+
+      \item \textbf{Participación del Club de Ecología de primaria en la reforma del sistema de riego.}
+            \begin{center}
+                  \includegraphics[width=0.5\textwidth]{imagenes/sprinkler.jpg}
+            \end{center}
+\end{itemize}
+
+\subsection{Materiales Utilizados}
+\begin{itemize}
+      \item \textbf{Arduino Nano}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/arduino.jpg}
+            \end{center}
+
+      \item \textbf{Panel Solar}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/pane.png}
+            \end{center}
+
+      \item \textbf{Controlador de carga}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/controlaor.png}
+            \end{center}
+
+      \item \textbf{Driver de motor}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/motor.png}
+            \end{center}
+
+      \item \textbf{Inversor Truper - 200W}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/inversor.png}
+            \end{center}
+
+      \item \textbf{Electroválvula}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/electrovalve.png}
+            \end{center}
+
+      \item \textbf{Caja IP-65}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/caja.png}
+            \end{center}
+
+      \item \textbf{Protoboard}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/breadboard.png}
+            \end{center}
+
+      \item \textbf{Batería 12V 5Ah/20HR}
+            \begin{center}
+                  \includegraphics[width=0.3\textwidth]{imagenes/bateria.png}
+            \end{center}
+\end{itemize}
+
+\end{document}
