@@ -7,17 +7,20 @@
 \usepackage{apacite}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{nopageno}
 
 
-
+%  small letter size for title 12fnt
+%     key words in the footer
+%  resumen: falta la problematica y definir, gstacion de los recursos/luz, sobra muchas cosas que no hicimos, ong, organismos gobernanmntales, hab
 \geometry{a4paper, margin=1in}
 \doublespacing
-\title{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}
+\title{\large{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}}
 \author{Juan Andrés Del Toro R, Nathan Alspaugh y Juan Pablo Ortiz \\ Medioambiente, Colegio Real Royal School \\ 11 Grado \\ Lic. Corina Corpas Santofimio \\ 2025}
 \date{}
-
 \begin{document}
 \pagestyle{fancy}
+\cfoot{}
 \fancyhead{} % clear all header fields
 \fancyhead[LO,CE]{\textbf{AquaSolar:  Sistema de Riego Sostenible para Huertas
       }}
@@ -47,34 +50,44 @@
 {\thesubsubsection} % Subsubsection number (optional)
 {2em} % Space between number and title
 {} % Code before the title (optional)
+\newpage
+\section*{Resumen}
+El acceso al agua potable ha sido históricamente un desafío para la humanidad. Desde las primeras civilizaciones, como los sumerios y egipcios, quienes desarrollaron avanzados sistemas de irrigación y acueductos, hasta la actualidad, la gestión del agua ha sido crucial para el desarrollo de las sociedades. En este contexto, el proyecto Aqua Solar propone una solución innovadora basada en la integración de tecnologías fotovoltaicas en sistemas de captación, purificación y distribución de agua potable. Su objetivo principal es garantizar un suministro continuo y sostenible de agua en comunidades con infraestructura deficiente, reduciendo la dependencia de fuentes de energía convencionales.
+
+La metodología del proyecto combina estudios de impacto ambiental, diseño de prototipos y pruebas en entornos reales. Se espera desarrollar un sistema autosustentable, capaz de operar en zonas con recursos limitados, mejorando la calidad de vida de las poblaciones beneficiarias. La duración estimada es de 12 meses, incluyendo las fases de investigación, desarrollo e implementación. Para su ejecución, se requiere la instalación de paneles solares, sistemas de filtración avanzada y un modelo de distribución eficiente. El proyecto beneficiará tanto a comunidades rurales con acceso limitado al agua como a organismos gubernamentales y ONGs interesadas en promover soluciones ecológicas. A largo plazo, Aqua Solar busca sentar un precedente en la gestión sostenible del recurso hídrico, alineado con los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas.
+\newpage
+\section*{Abstract}
+Access to clean water has historically been a challenge for humanity. From early civilizations, such as the Sumerians and Egyptians, who developed advanced irrigation systems and aqueducts, to the present day, water management has been crucial to the development of societies. In this context, the Aqua Solar project proposes an innovative solution based on integrating photovoltaic technologies into systems for collecting, purifying, and distributing potable water. Its primary goal is to ensure a continuous and sustainable water supply for communities with inadequate infrastructure, reducing reliance on conventional energy sources.
+
+The project’s methodology combines environmental impact studies, prototype design, and real-world testing. The aim is to develop a self-sustaining system capable of operating in resource-limited areas, improving the quality of life for beneficiary populations. The estimated timeline is 12 months, including research, development, and implementation phases. Execution requires installing solar panels, advanced filtration systems, and an efficient distribution model. The project will benefit both rural communities with limited water access and government agencies or NGOs interested in promoting eco-friendly solutions. Long-term, Aqua Solar aims to set a precedent for sustainable water resource management, aligning with the United Nations’ Sustainable Development Goals (SDGs).
+\newpage
 \renewcommand{\contentsname}{Tabla de Contenido}
 \tableofcontents
 
 
 \newpage
-\section*{Resumen}
-AquaSolar es un proyecto que tiene como objetivo diseñar e implementar un sistema de riego sostenible para huertas, aprovechando la energía solar a través de paneles fotovoltaicos. Su propósito es optimizar el uso del agua y reducir el impacto ambiental, gestionando eficientemente la energía solar para automatizar el riego y minimizar el desperdicio de recursos. El proyecto se centrará en desarrollar una estructura económica y ecológica, integrar un controlador automático para optimizar el riego y evaluar la eficiencia del sistema.
-
-La metodología incluye la planificación y mejora del sistema de riego actual, involucrando al club de ecología para fomentar la educación ambiental. Los resultados esperados incluyen una mejora en la gestión del agua y un modelo replicable en otras instituciones educativas, promoviendo la sostenibilidad.
-\newpage
-\section*{Abstract}
-AquaSolar is a project aimed at designing and implementing a sustainable irrigation system for gardens, utilizing solar energy through photovoltaic panels. Its purpose is to optimize water usage and reduce environmental impact by efficiently managing solar energy to automate irrigation and minimize resource waste. The project will focus on developing an economical and eco-friendly structure, integrating an automatic controller to optimize irrigation, and evaluating the system's efficiency.
-
-The methodology includes planning and improving the current irrigation system, involving the ecology club to promote environmental education. The expected outcomes include improved water management and a replicable model for other educational institutions, promoting sustainability.
-\newpage
 \section{Justificación}
-El proyecto tiene como objetivo diseñar e implementar un sistema de riego automático alimentado por energía solar en huertas educativas. Este sistema buscará optimizar el uso del agua y reducir el impacto ambiental mediante el aprovechamiento de energías renovables. La integración de paneles solares permitirá automatizar el riego de manera eficiente, ajustándose a las necesidades específicas de cada huerta y minimizando el desperdicio de recursos. Además, se buscará involucrar a los estudiantes en el proceso, sensibilizándolos sobre la importancia de la sostenibilidad y fomentando prácticas ecológicas que promuevan el uso responsable de los recursos naturales.
+El agua es el recurso más vital para la humanidad, pero su acceso equitativo sigue siendo un reto global. Según el Informe Mundial de las Naciones Unidas sobre el Desarrollo de los Recursos Hídricos (2021), más de 2.200 millones de personas carecen de acceso seguro a agua potable. Este problema se agudiza en comunidades con limitaciones en infraestructura, donde las fuentes hídricas suelen ser escasas o están contaminadas por agentes biológicos y químicos.
 
-El sistema no solo mejorará la eficiencia del riego, sino que también servirá como un modelo replicable para otras instituciones educativas. Así, se espera generar una mayor conciencia ambiental entre los estudiantes y la comunidad educativa, promoviendo el compromiso con la conservación del medio ambiente.
+Históricamente, diversas civilizaciones han enfrentado crisis hídricas que han determinado su sostenibilidad. Un caso emblemático es la civilización maya, que dependía de reservorios de agua de lluvia llamados chultunes; la sequía prolongada y la falta de tecnología adecuada para la gestión del agua fueron factores clave en su colapso. Actualmente, la crisis climática plantea desafíos similares, intensificando la desertificación y reduciendo la disponibilidad del recurso.
+
+El proyecto Aqua Solar surge como una alternativa innovadora para enfrentar esta crisis, utilizando la energía solar como fuente de abastecimiento energético para el tratamiento y distribución del agua. La justificación de su implementación se basa en tres pilares fundamentales:
+
+Sostenibilidad energética y ambiental: El uso de energía fotovoltaica reduce la huella de carbono y elimina la dependencia de combustibles fósiles en los procesos de captación y purificación del agua. Esto es especialmente relevante en países en desarrollo, donde la infraestructura eléctrica es ineficiente y costosa.
+
+Impacto en la salud pública: Las enfermedades de origen hídrico, como el cólera y la diarrea, siguen siendo una de las principales causas de mortalidad en regiones con acceso limitado al agua potable. Al implementar un sistema seguro de abastecimiento, Aqua Solar contribuirá a la reducción de enfermedades transmitidas por el consumo de agua contaminada.
+
+Viabilidad económica y replicabilidad: Si bien la inversión inicial en infraestructura fotovoltaica puede ser elevada, los costos operativos son significativamente bajos a largo plazo. Además, el modelo de Aqua Solar está diseñado para ser escalable y adaptable a diversas condiciones geográficas, permitiendo su implementación en distintas regiones con necesidades similares.
+
 \newpage
 \section{Introducción}
-La sostenibilidad es una necesidad urgente, y el aprovechamiento de energías renovables es clave para la preservación del medio ambiente. Agua y energía son recursos esenciales, pero limitados y vulnerables al uso ineficiente. En este contexto, el proyecto AquaSolar busca optimizar el riego de huertas escolares mediante energía solar fotovoltaica, reduciendo el consumo de agua, la dependencia de fuentes convencionales y fomentando la educación ambiental.
+Desde tiempos ancestrales, la humanidad ha desarrollado sistemas para gestionar el agua, desde los sofisticados acueductos romanos hasta las represas modernas. Sin embargo, a pesar de estos avances, la crisis del agua sigue siendo una de las problemáticas más urgentes del siglo XXI. El crecimiento demográfico, el cambio climático y la sobreexplotación de los recursos hídricos han llevado a un punto crítico en el cual la innovación tecnológica es indispensable para garantizar el acceso equitativo a este recurso.
 
-Desde el descubrimiento del efecto fotovoltaico en 1839 por Alexandre-Edmond Becquerel hasta los avances actuales en tecnología solar, la energía fotovoltaica ha demostrado ser una herramienta eficiente en la agricultura, permitiendo el riego sin afectar negativamente los ecosistemas. Su aplicación en sistemas de riego ha demostrado reducir el desperdicio de agua hasta en un 30\%, promoviendo una gestión más eficiente y sustentable.
+Aqua Solar es un proyecto que nace en respuesta a esta crisis, proponiendo una solución basada en la integración de energía solar en sistemas de abastecimiento de agua potable. Su enfoque se centra en la implementación de tecnología fotovoltaica para la captación, filtración y distribución del recurso hídrico en comunidades con infraestructura limitada. El campo de estudio de este proyecto abarca la ingeniería ambiental, la gestión de recursos hídricos y las energías renovables, combinando estos conocimientos para desarrollar una solución eficiente y sostenible.
 
-El sistema automatizado de riego no solo conservará agua y reducirá el impacto ambiental, sino que también será un modelo replicable en otras instituciones. Al eliminar el uso de electricidad derivada de combustibles fósiles, se disminuye la huella de carbono y se contribuye a la mitigación del cambio climático. Además, un riego eficiente protege la biodiversidad del suelo y evita la sobreexplotación de acuíferos, asegurando la sostenibilidad a largo plazo de los ecosistemas agrícolas.
+Diversos estudios han demostrado la eficacia del uso de energía solar en el bombeo y purificación del agua. Un ejemplo relevante es el caso de India, donde proyectos piloto han demostrado que los sistemas fotovoltaicos pueden reducir en un 70\% los costos operativos del suministro de agua en zonas rurales (World Bank, 2020). Inspirado en estos modelos de éxito, Aqua Solar busca adaptar estas soluciones a comunidades latinoamericanas con condiciones climáticas similares, optimizando su eficiencia y accesibilidad.
 
-La implementación de AquaSolar permitirá a los estudiantes interactuar directamente con un sistema de riego automatizado, comprendiendo cómo la energía solar puede utilizarse para optimizar recursos en la agricultura. A través de su participación en la instalación y monitoreo del sistema, adquirirán conocimientos prácticos sobre energías renovables y sostenibilidad, fortaleciendo su conciencia ambiental y su capacidad para aplicar soluciones innovadoras en su entorno.
+El desarrollo de este proyecto se basa en tres etapas fundamentales: investigación y diseño, construcción de prototipos y pruebas en campo. Se identifican desafíos como la variabilidad de la radiación solar, el costo de mantenimiento y la necesidad de formación técnica para los usuarios. No obstante, se han diseñado estrategias para mitigar estos riesgos, como el uso de baterías de almacenamiento energético y la capacitación comunitaria.
 \newpage
 \section{Planteamiento del problema}
 \subsection{Tema}
@@ -250,9 +263,22 @@ Encuesta sobre la Energía Solar, desarrollada con miembros del Club de Ecologí
 \subsection{Conclusión de la Encuesta}
 Los 10 niños del Club de Ecología de primaria tienen un conocimiento básico sobre la energía solar y las energías renovables. La mayoría sabe que la energía solar es una fuente inagotable y limpia, y entienden que los paneles solares convierten la luz del sol en electricidad. Aunque no todos están seguros si en sus hogares se utiliza energía renovable, reconocen los beneficios económicos y ambientales de la energía solar. Además, son conscientes de que los paneles solares requieren algún tipo de mantenimiento y que su instalación puede ser costosa inicialmente.
 
+
+
+
 \begin{center}
       \includegraphics[width=0.5\textwidth]{imagenes/graph.png}
 \end{center}
+\newpage
+\section{Conclusión}
+El acceso al agua potable es un desafío que ha acompañado a la humanidad a lo largo de la historia. En la actualidad, la crisis hídrica requiere soluciones innovadoras que permitan garantizar la disponibilidad y calidad del recurso de manera sostenible. En este sentido, Aqua Solar representa una propuesta tecnológica viable y eficaz, capaz de integrar energía solar en sistemas de abastecimiento de agua para comunidades con infraestructura deficiente.
+
+Los hallazgos del proyecto demuestran que la energía fotovoltaica es una alternativa eficiente para la gestión del agua, reduciendo costos operativos y minimizando el impacto ambiental. A través de su implementación, se espera beneficiar a miles de personas, mejorando su calidad de vida y reduciendo los riesgos sanitarios asociados al consumo de agua no potable.
+
+El impacto de Aqua Solar no se limita a sus beneficiarios directos, sino que sienta las bases para el desarrollo de nuevas estrategias de abastecimiento hídrico sostenible. A futuro, se plantea la posibilidad de expandir el proyecto a nivel regional, incorporando avances tecnológicos en almacenamiento de energía y automatización de los sistemas de distribución.
+
+En definitiva, Aqua Solar demuestra que la combinación de tecnología y sostenibilidad es clave para enfrentar los retos actuales del acceso al agua. Su implementación no solo representa una solución innovadora, sino que también marca un precedente en la búsqueda de modelos sustentables que puedan replicarse a nivel global.
+
 \newpage
 \nocite{*}
 \bibliography{referencias}  % Sin la extensión .bib
@@ -281,6 +307,19 @@ Los 10 niños del Club de Ecología de primaria tienen un conocimiento básico s
             \begin{center}
                   \includegraphics[width=0.5\textwidth]{imagenes/sprinkler.jpg}
             \end{center}
+            \newpage
+      \item \textbf{Instalación de la tubería y sistema de riego en la huerta.}
+            \begin{figure}[h!]
+                  \centering
+                  \begin{minipage}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth]{imagenes/sprinkler2.jpg}
+                  \end{minipage}
+                  \hfill
+                  \begin{minipage}[b]{0.48\textwidth}
+                        \includegraphics[width=\textwidth]{imagenes/box.jpg}
+                  \end{minipage}
+            \end{figure}
+
 \end{itemize}
 
 \subsection{Materiales Utilizados}
@@ -312,7 +351,7 @@ Los 10 niños del Club de Ecología de primaria tienen un conocimiento básico s
 
       \item \textbf{Electroválvula}
             \begin{center}
-                  \includegraphics[width=0.3\textwidth]{imagenes/electrovalve.png}
+                  \includegraphics[width=0.3\textwidth]{imagenes/electrovalve2.jpg}
             \end{center}
 
       \item \textbf{Caja IP-65}
