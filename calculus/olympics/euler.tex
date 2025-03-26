@@ -69,9 +69,9 @@
     \item Sea $f$ una función tal que $f(x + y) = f(x) + f(y)$ para todo $x, y \in \mathbb{R}$. Hallar el valor de  $f(0) + f(1) + f(2) + f(3)$ si $f(1) = 1/2$.
     \item{Si un círculo de diámetro 10 es dividido en muchas secciones y luego reorganizado para formar un rectángulo, ¿cuánto es la diferencia del perímetro del rectángulo y la circunferencia original del círculo?
           %   \\    \begin{center}
-              
+
           %   \end{center}
-        }
+          }
     \item Thor tiene siete rocas y un martillo. Cada vez que le pega a una roca con su martillo, se parte en cinco rocas más pequeñas. Si parte las rocas varias veces, ¿cual de los siguientes números puede ser el número de rocas que obtiene al final? \\ \begin{tasks}[label=\Alph*.](5)
               \task 17
               \task 20
@@ -121,6 +121,73 @@
           \end{center}}
     \item ¿Cuál es el valor de n?  \\~\\ $7n-6n=(7+6)(7^2+6^2)(7^4+6^4)(7^8+6^8)(7^{16}+6^{16}).....(7^{2048}+6^{2048})$
     \item ¿Cuál es el valor de la siguiente ecuación? \\~\\ $\sqrt{4+\sqrt{4+\sqrt{4+\sqrt{4+...}}}}$
+    \item  En un salón de 100 personas, 99\% son zurdos. ¿Cuántos zurdos tienen que dejar el salón para que el porcentaje de zurdos sea 98\%?
+    \item ¿Cuál es la suma de las soluciones de $x^{\sqrt{x}}=\sqrt{x^x}$?
+    \item{Un semicírculo se encuentra inscrito dentro de otro semicírculo más grande como se muestra en la figura. ¿Cuál es el radio del semicírculo menor? \\ \begin{tasks}[label=\Alph*.](5)
+              \task $\frac{\sqrt{2}}{2}$ cm
+              \task $\sqrt{2}$ mm
+              \task $2$ cm
+              \task $\sqrt{2}$ cm
+              \task N/A
+          \end{tasks}}
+    \item{Sea \( k \) un número real distinto de cero. Se grafican dos funciones
+
+          \[
+              f(x) = \frac{k}{x}, \quad g(x) = kx + k
+          \]
+
+          sobre el mismo plano. ¿En cuál de las siguientes opciones se muestran correctamente las gráficas?
+
+          \begin{center}
+              \begin{tabular}{cc}
+                  A. \quad
+                  \begin{tikzpicture}[scale=0.3]
+                      \draw[->] (-2.5,0) -- (2.5,0); % eje x
+                      \draw[->] (0,-2.5) -- (0,2.5); % eje y
+                      \draw[domain=-2.5:-0.2, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[domain=0.2:2.5, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[black] (2,-1.5) -- (-2,2); % Linea recta
+                  \end{tikzpicture}
+
+                  B. \quad
+                  \begin{tikzpicture}[scale=0.3]
+                      \draw[->] (-2.5,0) -- (2.5,0);
+                      \draw[->] (0,-2.5) -- (0,2.5);
+                      \draw[domain=-2.5:-0.2, smooth, variable=\x, black] plot ({\x},{-1/\x});
+                      \draw[domain=0.2:2.5, smooth, variable=\x, black] plot ({\x},{1/-\x});
+                      \draw[black] (-2,-1.5) -- (2,1);
+                  \end{tikzpicture}
+
+                  C. \quad
+                  \begin{tikzpicture}[scale=0.3]
+                      \draw[->] (-2.5,0) -- (2.5,0);
+                      \draw[->] (0,-2.5) -- (0,2.5);
+                      \draw[domain=-2.5:-0.2, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[domain=0.2:2.5, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[black] (-2,-1) -- (2,1.5);
+                  \end{tikzpicture}
+
+                  D. \quad
+                  \begin{tikzpicture}[scale=0.3]
+                      \draw[->] (-2.5,0) -- (2.5,0);
+                      \draw[->] (0,-2.5) -- (0,2.5);
+                      \draw[domain=-2.5:-0.2, smooth, variable=\x, black] plot ({\x},{-1/\x});
+                      \draw[domain=0.2:2.5, smooth, variable=\x, black] plot ({\x},{1/-\x});
+                      \draw[black] (-2,1.5) -- (2,-1);
+                  \end{tikzpicture}
+
+                  E. \quad
+                  \begin{tikzpicture}[scale=0.3]
+                      \draw[->] (-2.5,0) -- (2.5,0);
+                      \draw[->] (0,-2.5) -- (0,2.5);
+                      \draw[domain=-2.5:-0.2, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[domain=0.2:2.5, smooth, variable=\x, black] plot ({\x},{1/\x});
+                      \draw[black] (2,-1) -- (-2,0.5);
+                  \end{tikzpicture}
+              \end{tabular}
+          \end{center}}
+
+
 
 
 
