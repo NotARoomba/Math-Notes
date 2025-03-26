@@ -8,15 +8,17 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{nopageno}
+\usepackage{tocloft}
 
 
 %  small letter size for title 12fnt
 %     key words in the footer
-%  resumen: falta la problematica y definir, gstacion de los recursos/luz, sobra muchas cosas que no hicimos, ong, organismos gobernanmntales, hab
+% Justification lins
+% only marco teorico and metodologia and anexos, encuesta/resultados
 \geometry{a4paper, margin=1in}
 \doublespacing
 \title{\large{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}}
-\author{Juan Andrés Del Toro R, Nathan Alspaugh y Juan Pablo Ortiz \\ Medioambiente, Colegio Real Royal School \\ 11 Grado \\ Lic. Corina Corpas Santofimio \\ 2025}
+\author{Juan Andrés Del Toro R, Nathan Daniel Alspaugh y Juan Pablo Ortiz \\ Medio Ambiente, Colegio Real Royal School \\ 11 Grado \\ Lic. Corina Corpas Santofimio \\ 20 de Mayo de 2025}
 \date{}
 \begin{document}
 \pagestyle{fancy}
@@ -31,6 +33,7 @@
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
 \renewcommand{\thesubsubsection}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \titleformat{\section} % Command to modify
 {\normalfont\Large\bfseries} % Font style for the section title
 {\thesection} % Section number (optional)
@@ -109,17 +112,17 @@ Diseñar e implementar un sistema de riego automatizado para huertas, alimentado
 \end{itemize}
 \newpage
 \section{Marco Teórico}
-\subsection{Introducción al Riego Sostenible}
+% \subsection{Introducción al Riego Sostenible}
 El riego sostenible se refiere al uso racional del agua, con el objetivo de minimizar su desperdicio y reducir el impacto ambiental. En este proyecto, la energía solar es utilizada para implementar un sistema de riego automatizado en huertas escolares, promoviendo el ahorro de recursos y contribuyendo a la educación ambiental de los estudiantes.
 
-\subsection{Conceptos Clave}
+% \subsection{Conceptos Clave}
 \begin{itemize}
       \item \textbf{Energía Solar}: Obtenida a través de paneles fotovoltaicos, convierte la luz solar en electricidad, lo cual permite una fuente de energía renovable y libre de emisiones para el riego.
       \item \textbf{Automatización del riego}: Uso de sensores y controladores, específicamente el Arduino Nano, para gestionar el suministro de agua, ajustándose a las necesidades del cultivo y reduciendo así el consumo hídrico.
       \item \textbf{Sostenibilidad Ambiental}: Incluye prácticas que conservan los recursos naturales y reducen la dependencia de fuentes no renovables, fundamentales en este proyecto al utilizar energía solar para reducir la huella de carbono.
 \end{itemize}
 
-\subsection{Revisión de Literatura y Teorías Aplicadas}
+% \subsection{Revisión de Literatura y Teorías Aplicadas}
 \begin{itemize}
       \item \textbf{Desarrollo Sostenible} \cite{Brundtland1987}: Sostiene la importancia de prácticas que protejan los recursos para futuras generaciones, respaldando el uso de tecnologías sostenibles.
       \item \textbf{Gestión Integrada de Recursos Hídricos} \cite{GWP2000}: Aboga por un uso eficiente y renovable del agua, base para aplicar energía solar en riego automatizado.
@@ -128,8 +131,8 @@ El riego sostenible se refiere al uso racional del agua, con el objetivo de mini
       \item \textbf{Varela-Cristobo et al. (2019)}: Destacan los beneficios educativos y ambientales de sistemas de riego solares en colegios, relevantes para este proyecto.
 \end{itemize}
 
-\subsection{Metodología de Recopilación y Evaluación de Datos}
-El sistema de riego fue evaluado mediante la recopilación de datos sobre el consumo de agua y la energía producida por los paneles solares, utilizando sensores de flujo y medidores de generación fotovoltaica. Estos métodos se fundamentan en los estudios de \cite{Campbell2018} e \cite{IRENA2019}, que brindan un marco metodológico para medir la eficiencia de sistemas solares en entornos educativos. Además, el impacto sobre la conciencia ambiental de los estudiantes se mide a través de encuestas y análisis cualitativos, siguiendo el enfoque de \cite{Varela2019}.
+% \subsection{Metodología de Recopilación y Evaluación de Datos}
+% El sistema de riego fue evaluado mediante la recopilación de datos sobre el consumo de agua y la energía producida por los paneles solares, utilizando sensores de flujo y medidores de generación fotovoltaica. Estos métodos se fundamentan en los estudios de \cite{Campbell2018} e \cite{IRENA2019}, que brindan un marco metodológico para medir la eficiencia de sistemas solares en entornos educativos. Además, el impacto sobre la conciencia ambiental de los estudiantes se mide a través de encuestas y análisis cualitativos, siguiendo el enfoque de \cite{Varela2019}.
 
 \subsection{Materiales y Componentes del Sistema}
 Para la implementación del sistema de riego sostenible, se utilizaron los siguientes materiales y componentes:
@@ -155,12 +158,13 @@ Se basa en tres conceptos centrales: eficiencia energética, gestión del agua, 
 
 Este enfoque no solo garantiza la sostenibilidad y eficiencia, sino que también potencia el aprendizaje y la adopción de prácticas ambientales responsables.
 \newpage
-\section{Metodología}
-\subsection{Actividad \#1}
-La primera actividad se enfocará en la planificación y en el esquema de un sistema de riego mediante tubos plásticos reutilizados en una huerta específica, con miras a una futura integración con paneles solares para una mayor eficiencia energética y sostenibilidad. Este proceso comprenderá varias etapas clave. En primer lugar, se llevará a cabo la preparación del terreno para la instalación del sistema de riego, asegurando que esté listo para recibir la infraestructura necesaria. Posteriormente, se realizará un análisis detallado del área de la huerta junto con las medidas correspondientes para determinar la distribución óptima del sistema y su distribución. Este análisis considerará factores críticos como la topografía del terreno, los tipos de cultivos presentes y sus necesidades específicas de riego.
+\section{Procedimiento}
 
-\subsection{Actividad \#2}
-La actividad del proyecto consiste en reformar el sistema de riego en la huerta escolar. La idea es reemplazar los tubos existentes por unos más pequeños, lo que aumentará la presión del agua al disminuir el volumen que debe ser distribuido. Además, se planea utilizar tornillos como aspersores, instalándose de manera que el agua que fluya por los tubos choque con ellos y se disperse, creando así un sistema de riego más eficiente.
+\subsection{Etapa 1}
+La primera etapa se enfocará en la planificación y en el esquema de un sistema de riego mediante tubos plásticos reutilizados en una huerta específica, con miras a una futura integración con paneles solares para una mayor eficiencia energética y sostenibilidad. Este proceso comprenderá varias etapas clave. En primer lugar, se llevará a cabo la preparación del terreno para la instalación del sistema de riego, asegurando que esté listo para recibir la infraestructura necesaria. Posteriormente, se realizará un análisis detallado del área de la huerta junto con las medidas correspondientes para determinar la distribución óptima del sistema y su distribución. Este análisis considerará factores críticos como la topografía del terreno, los tipos de cultivos presentes y sus necesidades específicas de riego.
+
+\subsection{Etapa 2}
+La segunda etapa del proyecto consiste en reformar el sistema de riego en la huerta escolar. La idea es reemplazar los tubos existentes por unos más pequeños, lo que aumentará la presión del agua al disminuir el volumen que debe ser distribuido. Además, se planea utilizar tornillos como aspersores, instalándose de manera que el agua que fluya por los tubos choque con ellos y se disperse, creando así un sistema de riego más eficiente.
 
 Durante este proceso de reforma, se pretende involucrar al club de ecología de primaria. Su participación sería doble: por un lado, podrían acompañar el proceso de reforma para aprender de primera mano sobre el tema y cómo se lleva a cabo. Por otro lado, se les instruirá acerca de los principios detrás de la reforma del sistema de riego, explicándoles cómo los cambios propuestos pueden contribuir a un uso más eficiente del agua y a una mejor gestión de recursos en la huerta escolar.
 Además de la participación activa del club de ecología, se planea llevar a cabo encuestas entre sus miembros para medir su conocimiento sobre el tema antes y después de la reforma del sistema de riego. Esto permitirá evaluar el impacto de la actividad en su comprensión y conciencia ambiental, así como identificar áreas que requieran mayor énfasis en futuras actividades educativas.
