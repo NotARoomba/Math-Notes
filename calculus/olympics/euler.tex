@@ -130,7 +130,28 @@
           \end{center}}
     \item  En un salón de 100 personas, 99\% son zurdos. ¿Cuántos zurdos tienen que dejar el salón para que el porcentaje de zurdos sea 98\%?
     \item ¿Cuál es la suma de las soluciones de $x^{\sqrt{x}}=\sqrt{x^x}$?
-    \item{Un semicírculo se encuentra inscrito dentro de otro semicírculo más grande como se muestra en la figura. ¿Cuál es el radio del semicírculo menor? \\ \begin{tasks}[label=\Alph*.](5)
+    \item{Un semicírculo se encuentra inscrito dentro de otro semicírculo más grande como se muestra en la figura. ¿Cuál es el radio del semicírculo menor? \begin{center}
+              \begin{tikzpicture}
+                  % Define coordinates
+                  \coordinate (A) at (-2,0);
+                  \coordinate (B) at (2,0);
+                  \coordinate (O) at (0,0);
+                  \coordinate (F) at (-3.41,1.41) ;
+
+
+                  % Draw the large semicircle
+                  \draw (O) arc[start angle=0, end angle=180, radius=2cm] -- cycle;
+
+                  % Draw the small semicircle inside
+                  \draw (F) arc[start angle=180, end angle=360, radius=1.41cm] -- cycle;
+
+                  % Dimension line
+                  \draw[<->] (-4,-0.25) -- (0,-0.25);
+                  \node[below] at (-2,-0.25) {\textbf{4 cm}};
+
+              \end{tikzpicture}
+          \end{center}
+          \begin{tasks}[label=\Alph*.](5)
               \task $\frac{\sqrt{2}}{2}$ cm
               \task $\sqrt{2}$ mm
               \task $2$ cm
