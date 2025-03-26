@@ -8,6 +8,7 @@
 \usepackage{tasks}
 \usepackage[a4paper, total={6in, 9in}]{geometry} 
 \usepackage{tikz}
+\usepackage{graphicx}
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{shapes.geometric}
 
@@ -67,10 +68,13 @@
               \end{tikzpicture}\end{center}}
     \item Si $a + b = 10$ y $a^2 + b^2 = 50$, ¿a cuanto equivale $ab$?
     \item Sea $f$ una función tal que $f(x + y) = f(x) + f(y)$ para todo $x, y \in \mathbb{R}$. Hallar el valor de  $f(0) + f(1) + f(2) + f(3)$ si $f(1) = 1/2$.
+          \newpage
     \item{Si un círculo de diámetro 10 es dividido en muchas secciones y luego reorganizado para formar un rectángulo, ¿cuánto es la diferencia del perímetro del rectángulo y la circunferencia original del círculo?
-          %   \\    \begin{center}
-
-          %   \end{center}
+          \begin{figure}[h]
+              \centering
+              \includegraphics[width=8cm]{images/circleapprox.jpg} % Replace "image.png" with your actual file name
+              \label{fig:my_label}
+          \end{figure}
           }
     \item Thor tiene siete rocas y un martillo. Cada vez que le pega a una roca con su martillo, se parte en cinco rocas más pequeñas. Si parte las rocas varias veces, ¿cual de los siguientes números puede ser el número de rocas que obtiene al final? \\ \begin{tasks}[label=\Alph*.](5)
               \task 17
@@ -105,11 +109,12 @@
                   \draw[thick] (0,0) circle(2.83);
 
                   % Draw square
-                  \draw[gray, thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
 
                   % Draw inverted triangle
                   \fill[black] (A) -- (B) -- (E) -- cycle;
-
+                  \fill[black] (A) arc[start angle=135, end angle=45, radius=2.83] -- (B) -- cycle;
+                  \draw[gray, thick] (A) -- (B) -- (C) -- (D) -- cycle;
                   % Labels
                   \node[anchor=south east] at (A) {\textbf{A}};
                   \node[anchor=south west] at (B) {\textbf{B}};
