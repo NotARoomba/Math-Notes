@@ -9,16 +9,14 @@
 \usepackage{titlesec}
 \usepackage{nopageno}
 \usepackage{tocloft}
+\usepackage{pgf-pie}
 
 
-%  small letter size for title 12fnt
-%     key words in the footer
-% Justification lins
-% only marco teorico and metodologia and anexos, encuesta/resultados
+%  CENTER TITLES ADD CHARTS FOR THE SURVEY
 \geometry{a4paper, margin=1in}
 \doublespacing
 \title{\large{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}}
-\author{Juan Andrés Del Toro R, Nathan Daniel Alspaugh y Juan Pablo Ortiz \\ Medio Ambiente, Colegio Real Royal School \\ Undecimo Grado \\ Lic. Corina Corpas Santofimio \\ 21 de Mayo de 2025}
+\author{Juan Andrés Del Toro R, Nathan Daniel Alspaugh y Juan Pablo Ortiz \\ Medio Ambiente, Colegio Real Royal School \\ Undécimo Grado \\ Lic. Corina Corpas Santofimio \\ 21 de mayo de 2025}
 \date{}
 \begin{document}
 \pagestyle{fancy}
@@ -35,7 +33,7 @@
 \renewcommand{\thesubsubsection}{}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \titleformat{\section} % Command to modify
-{\normalfont\Large\bfseries} % Font style for the section title
+{\normalfont\Large\bfseries\centering} % Font style for the section title
 {\thesection} % Section number (optional)
 {0pt} % Space between number and title
 {} % Code before the title (optional)
@@ -61,7 +59,7 @@ El objetivo central del proyecto es diseñar un sistema de riego eficiente, impu
 
 Con este enfoque, el proyecto no solo busca optimizar el uso de la energía solar, sino también sensibilizar a los estudiantes sobre la importancia de las energías renovables y su impacto positivo en el medio ambiente.
 \\~\\
-\textbf{Palabras clave:} Energías limpias, energía solar, energías renovables, sostenibilidad, autosuficiencia energética
+\textbf{Palabras claves:} Energías limpias, energía solar, energías renovables, sostenibilidad, autosuficiencia energética
 \newpage
 \section*{Abstract}
 Throughout history, humanity has faced challenges in managing natural resources, particularly in the use of non-renewable energy sources. According to the International Energy Agency \cite{IEA2020}, the overexploitation of resources such as electricity derived from fossil fuels represents a growing challenge for global sustainability. In this context, it is urgent to seek sustainable solutions that promote the use of clean energy. The Aqua Solar project addresses this need by implementing an automated irrigation system powered primarily by solar energy.
@@ -110,7 +108,7 @@ El desarrollo de este proyecto se basa en tres etapas fundamentales: investigaci
 \newpage
 \section{Planteamiento del problema}
 \subsection{Tema}
-Diseño e Implementación de un Sistema de Riego Sostenible para Huertas, Utilizando Energía Solar para Maximizar la Eficiencia en el Uso del Agua y Reducir el Impacto Ambiental.
+Implementación de un sistema de riego para aprovechar la energía solar con mayor eficiencia y sostenibilidad.
 
 \subsection{Pregunta Problema}
 ¿Cómo aprovechar de manera eficiente la energía solar para automatizar el riego en huertas, maximizando el uso del agua y reduciendo los costos operativos, mientras se minimiza el impacto ambiental?
@@ -198,10 +196,10 @@ El desarrollo de este proyecto combinó prácticas sostenibles con tecnología l
       \label{fig:diagrama}
 \end{figure}
 
-\subsubsection{Diseño del Sistema}
+\subsection{Diseño del Sistema}
 Como se muestra en la Figura \ref{fig:diagrama}, se diseñó un sistema de riego automatizado utilizando energía solar como fuente principal. El sistema regará las plantas dos veces al día, a las 7:00 a.m. y a las 6:00 p.m., durante un periodo de 5 minutos cada vez. Todos los componentes electrónicos estarán protegidos en una caja IP-65 (Figura \ref{fig:caja} del Anexo), asegurando resistencia al agua y al polvo.
 
-\subsubsection{Montaje del Sistema Eléctrico}
+\subsection{Montaje del Sistema Eléctrico}
 \begin{itemize}
       \item \textbf{Conexión del panel solar y la batería}: El panel solar (Figura \ref{fig:pane}) se conectará a la batería de 24V (Figura \ref{fig:bateria}) para garantizar su carga durante el día. Se recomienda utilizar un diodo en serie para evitar que la corriente vuelva al panel durante la noche.
 
@@ -210,10 +208,10 @@ Como se muestra en la Figura \ref{fig:diagrama}, se diseñó un sistema de riego
       \item \textbf{Control de la electroválvula}: La electroválvula será controlada a través de un driver de motor (Figura \ref{fig:motor}), que manejará el voltaje y la corriente adecuados para su funcionamiento. El Arduino enviará señales al driver para activar la electroválvula en los horarios especificados.
 \end{itemize}
 
-\subsubsection{Programación del Arduino Nano}
+\subsection{Programación del Arduino Nano}
 El Arduino Nano será programado para abrir y cerrar la electroválvula de forma automática a las horas definidas, implementando la lógica mostrada en el diagrama de flujo (Figura \ref{fig:diagrama}).
 
-\subsubsection{Montaje del Sistema de Riego}
+\subsection{Montaje del Sistema de Riego}
 \begin{itemize}
       \item Instalación de la electroválvula en la tubería del sistema de riego para controlar el flujo de agua, como se muestra en las Figuras \ref{fig:sprinkler2} y \ref{fig:box} del Anexo.
 
@@ -235,8 +233,20 @@ Para medir la opinión de los estudiantes de la sección primaria sobre la imple
             \begin{itemize}
                   \item Sí: 14 niños
                   \item No: 6 niños
-                  \item Respuesta común (Sí): "Es la energía que se obtiene de fuentes naturales que no se agotan, como el sol y el viento."
+                  \item Respuesta común (Sí): \lq\lq
+                        Es la energía que se obtiene de fuentes naturales que no se agotan, como el sol y el viento."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    14/Sí,
+                                    6/No
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Se utiliza energía renovable en tu hogar?}\\
             \textbf{Is renewable energy used in your home?}
@@ -244,8 +254,20 @@ Para medir la opinión de los estudiantes de la sección primaria sobre la imple
                   \item Sí: 8 niños
                   \item No: 10 niños
                   \item No estoy seguro: 2 niños
-                  \item Respuesta común (No estoy seguro): "Creo que no tenemos paneles solares en casa."
+                  \item Respuesta común (No estoy seguro): \lq\lq Creo que no tenemos paneles solares en casa."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    8/Sí,
+                                    10/No,
+                                    2/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Los paneles solares requieren mantenimiento regular?}\\
             \textbf{Do solar panels require regular maintenance?}
@@ -253,24 +275,58 @@ Para medir la opinión de los estudiantes de la sección primaria sobre la imple
                   \item Sí: 12 niños
                   \item No: 2 niños
                   \item No estoy seguro: 6 niños
-                  \item Respuesta común (Sí): "Creo que sí, pero no sé exactamente qué tipo de mantenimiento necesitan."
+                  \item Respuesta común (Sí): \lq\lq Creo que sí, pero no sé exactamente qué tipo de mantenimiento necesitan."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    12/Sí,
+                                    2/No,
+                                    6/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Es la energía solar una fuente de energía renovable?}\\
             \textbf{Is solar energy a renewable energy source?}
             \begin{itemize}
                   \item Sí: 20 niños
                   \item No: 0 niños
-                  \item Respuesta común (Sí): "Sí, porque viene del sol y el sol nunca se acaba."
+                  \item Respuesta común (Sí): \lq\lq Sí, porque viene del sol y el sol nunca se acaba."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    20/Sí,
+                                    0/No
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Los paneles solares convierten la luz solar en electricidad?}\\
             \textbf{Do solar panels convert sunlight into electricity?}
             \begin{itemize}
                   \item Sí: 20 niños
                   \item No: 0 niños
-                  \item Respuesta común (Sí): "Sí, eso es lo que hacen los paneles solares."
+                  \item Respuesta común (Sí): \lq\lq Sí, eso es lo que hacen los paneles solares."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    20/Sí,
+                                    0/No
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Se puede almacenar la energía solar para su uso posterior?}\\
             \textbf{Can solar energy be stored for later use?}
@@ -278,8 +334,20 @@ Para medir la opinión de los estudiantes de la sección primaria sobre la imple
                   \item Sí: 16 niños
                   \item No: 0 niños
                   \item No estoy seguro: 4 niños
-                  \item Respuesta común (Sí): "Sí, en baterías especiales que guardan la energía para usarla después."
+                  \item Respuesta común (Sí): \lq\lq Sí, en baterías especiales que guardan la energía para usarla después."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    16/Sí,
+                                    0/No,
+                                    4/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
       \item \textbf{¿Es la energía solar una alternativa más limpia a los combustibles fósiles?}\\
             \textbf{Is solar energy a cleaner alternative to fossil fuels?}
@@ -287,37 +355,81 @@ Para medir la opinión de los estudiantes de la sección primaria sobre la imple
                   \item Sí: 18 niños
                   \item No: 0 niños
                   \item No estoy seguro: 2 niños
-                  \item Respuesta común (Sí): "Sí, porque no contamina como el petróleo o el carbón."
+                  \item Respuesta común (Sí): \lq\lq Sí, porque no contamina como el petróleo o el carbón."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    18/Sí,
+                                    0/No,
+                                    2/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
-      \item \textbf{¿Pueden los sistemas solares ayudar a reducir las facturas de energía?}
-            \\
+      \item \textbf{¿Pueden los sistemas solares ayudar a reducir las facturas de energía?}\\
             \textbf{Can solar systems help reduce energy bills?}
             \begin{itemize}
                   \item Sí: 16 niños
                   \item No: 2 niños
                   \item No estoy seguro: 2 niños
-                  \item Respuesta común (Sí): "Sí, porque puedes usar la energía del sol en lugar de pagar por la electricidad."
+                  \item Respuesta común (Sí): \lq\lq Sí, porque puedes usar la energía del sol en lugar de pagar por la electricidad."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    16/Sí,
+                                    2/No,
+                                    2/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
-      \item \textbf{¿Es costosa la instalación de paneles solares?}
-            \\
+      \item \textbf{¿Es costosa la instalación de paneles solares?}\\
             \textbf{Is solar panel installation expensive?}
             \begin{itemize}
                   \item Sí: 14 niños
                   \item No: 2 niños
                   \item No estoy seguro: 4 niños
-                  \item Respuesta común (Sí): "He oído que sí, al principio es cara, pero luego ahorras dinero."
+                  \item Respuesta común (Sí): \lq\lq He oído que sí, al principio es cara, pero luego ahorras dinero."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    14/Sí,
+                                    2/No,
+                                    4/No estoy seguro
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 
-      \item \textbf{¿Es la energía solar una fuente inagotable?}
-            \\
+      \item \textbf{¿Es la energía solar una fuente inagotable?}\\
             \textbf{Is solar energy an inexhaustible source?}
             \begin{itemize}
                   \item Sí: 20 niños
                   \item No: 0 niños
-                  \item Respuesta común (Sí): "Sí, porque el sol siempre estará ahí."
+                  \item Respuesta común (Sí): \lq\lq Sí, porque el sol siempre estará ahí."
             \end{itemize}
+            \begin{minipage}{\linewidth}
+                  \centering
+                  \begin{minipage}{0.5\linewidth}
+                        \begin{tikzpicture}
+                              \pie[text=legend,sum=auto]{
+                                    20/Sí,
+                                    0/No
+                              }
+                        \end{tikzpicture}
+                  \end{minipage}%
+            \end{minipage}
 \end{itemize}
 
 \subsection{Conclusión de la Encuesta}
@@ -347,7 +459,6 @@ En definitiva, Aqua Solar demuestra que la combinación de tecnología y sosteni
 \newpage
 \section{Anexos}
 
-\subsection*{Logo}
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.5\textwidth]{imagenes/logo.png}
@@ -355,7 +466,6 @@ En definitiva, Aqua Solar demuestra que la combinación de tecnología y sosteni
       \label{fig:logo}
 \end{figure}
 
-\subsection*{Actividades}
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.5\textwidth]{imagenes/actividad1.jpg}
@@ -392,9 +502,8 @@ En definitiva, Aqua Solar demuestra que la combinación de tecnología y sosteni
       \end{minipage}
 \end{figure}
 
-\clearpage % Add page break to ensure separation
+% \clearpage % Add page break to ensure separation
 
-\subsection*{Materiales Utilizados}
 \begin{figure}[h!]
       \centering
       \includegraphics[width=0.3\textwidth]{imagenes/arduino.jpg}
