@@ -70,7 +70,8 @@ With this approach, the project not only aims to optimize the use of solar energ
 \\~\\
 \textbf{Keywords:} Clean energy, solar energy, renewable energy, sustainability, energy self-sufficiency.
 \newpage
-\renewcommand{\contentsname}{Tabla de Contenido}
+\renewcommand{\contentsname}{\hfill\bfseries\Large Tabla de Contenido\hfill}
+% \renewcommand{\cftaftertoctitle}{\hfill}
 \tableofcontents
 
 
@@ -85,14 +86,6 @@ La sostenibilidad energética y ambiental del proyecto se basa en la capacidad d
 En términos de viabilidad económica, aunque la inversión inicial en paneles solares puede ser elevada, los beneficios a largo plazo, tanto en la reducción de costos energéticos como en el impacto ambiental, hacen que el proyecto sea una opción viable y económica. Además, el sistema está diseñado para ser sencillo y efectivo, lo que lo hace adecuado para su implementación en huertos escolares, contribuyendo al aprendizaje de los estudiantes y a la sostenibilidad educativa. \cite{EIA2023}
 
 En resumen, la implementación de una propuesta como Aqua Solar que se enfoca en el uso eficiente de la energía solar es indispensable en la actualidad ya que propone una solución económica y ecológica para los huertos escolares, reduciendo costos, promoviendo prácticas sostenibles y ofreciendo una alternativa para grupos de jóvenes interesados en el aprovechamiento de los recursos y fuentes más limpias de energía.
-\newpage
-\section{Antecedentes}
-El desarrollo sostenible y la necesidad de reducir el impacto ambiental han cobrado cada vez más relevancia en la agenda educativa y científica, especialmente en contextos vulnerables al cambio climático como la región Caribe colombiana. En este sentido, el proyecto realizado por Salwa Bojanini, Sofía Llinás Hernández, Alejandro Pacheco Guerrero, Juan David Villarruel, Alejandro Mercado Pinedo y Santiago Torres Porras en el año 2023, en el Colegio Real de Barranquilla, representa un punto de partida fundamental para nuestro trabajo actual. Este proyecto planteó la optimización del mantenimiento de una huerta escolar mediante la implementación de un sistema de riego automatizado, impulsado por energía solar, como una forma concreta de avanzar hacia prácticas agrícolas sostenibles desde el ámbito educativo.
-
-Dicho proyecto demostró la viabilidad técnica y ambiental del uso de paneles solares como fuente energética limpia, abordando no solo una problemática local —el consumo elevado de energía y recursos en actividades agrícolas escolares— sino también conectándose con objetivos globales como los planteados en la Agenda 2030 de la ONU. En particular, se alinea con el Objetivo de Desarrollo Sostenible 7, que busca garantizar el acceso a una energía asequible, segura, sostenible y moderna para todos \cite{turn0search0}. Asimismo, el proyecto contribuye al Objetivo de Desarrollo Sostenible 4, promoviendo una educación inclusiva, equitativa y de calidad, y fomentando oportunidades de aprendizaje durante toda la vida para todos \cite{turn0search2}. Al incorporar asesoría de expertos de la Universidad del Norte y adaptar el diseño del sistema a las condiciones específicas del entorno escolar, el proyecto logró desarrollar una solución autosostenible que ejemplifica cómo la educación puede ser motor de transformación ecológica.
-
-
-A partir de esta base, nuestro proyecto de medio ambiente se articula con la visión propuesta por el trabajo anterior, reconociendo tanto su impacto como sus limitaciones, y busca ampliarlo en alcance y profundidad. Retomamos su enfoque en la energía fotovoltaica, su énfasis en la reducción de la huella de carbono y su intención pedagógica, para fortalecer la conciencia ambiental en nuestra comunidad educativa y avanzar hacia una cultura institucional verdaderamente comprometida con la sostenibilidad.
 
 
 \newpage
@@ -124,6 +117,15 @@ Diseñar un sistema que aproveche la luz solar para automatizar el riego en huer
       \item Integrar paneles fotovoltaicos para alimentar el sistema de riego, disminuyendo la huella de carbono y la dependencia de energías no renovables.
       \item Fomentar la sostenibilidad ambiental y la educación sobre energías renovables, estableciendo un modelo replicable para otras huertas educativas.
 \end{itemize}
+\newpage
+\section{Antecedentes}
+El desarrollo sostenible y la necesidad de reducir el impacto ambiental han cobrado cada vez más relevancia en la agenda educativa y científica, especialmente en contextos vulnerables al cambio climático como la región Caribe colombiana. En este sentido, el proyecto realizado por Salwa Bojanini, Sofía Llinás Hernández, Alejandro Pacheco Guerrero, Juan David Villarruel, Alejandro Mercado Pinedo y Santiago Torres Porras en el año 2023, en el Colegio Real de Barranquilla, representa un punto de partida fundamental para nuestro trabajo actual. Este proyecto planteó la optimización del mantenimiento de una huerta escolar mediante la implementación de un sistema de riego automatizado, impulsado por energía solar, como una forma concreta de avanzar hacia prácticas agrícolas sostenibles desde el ámbito educativo.
+
+Dicho proyecto demostró la viabilidad técnica y ambiental del uso de paneles solares como fuente energética limpia, abordando no solo una problemática local —el consumo elevado de energía y recursos en actividades agrícolas escolares— sino también conectándose con objetivos globales como los planteados en la Agenda 2030 de la ONU. En particular, se alinea con el Objetivo de Desarrollo Sostenible 7, que busca garantizar el acceso a una energía asequible, segura, sostenible y moderna para todos \cite{turn0search0}. Asimismo, el proyecto contribuye al Objetivo de Desarrollo Sostenible 4, promoviendo una educación inclusiva, equitativa y de calidad, y fomentando oportunidades de aprendizaje durante toda la vida para todos \cite{turn0search2}. Al incorporar asesoría de expertos de la Universidad del Norte y adaptar el diseño del sistema a las condiciones específicas del entorno escolar, el proyecto logró desarrollar una solución autosostenible que ejemplifica cómo la educación puede ser motor de transformación ecológica.
+
+
+A partir de esta base, nuestro proyecto de medio ambiente se articula con la visión propuesta por el trabajo anterior, reconociendo tanto su impacto como sus limitaciones, y busca ampliarlo en alcance y profundidad. Retomamos su enfoque en la energía fotovoltaica, su énfasis en la reducción de la huella de carbono y su intención pedagógica, para fortalecer la conciencia ambiental en nuestra comunidad educativa y avanzar hacia una cultura institucional verdaderamente comprometida con la sostenibilidad.
+
 \newpage
 \section{Marco Teórico}
 
@@ -186,17 +188,13 @@ El desarrollo de este proyecto combinó prácticas sostenibles con tecnología l
 
 
 
-
-\subsection{Desarrollo del sistema}
-
+\subsection{Diseño del Sistema}
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=1\textwidth]{imagenes/diagram.png}
       \caption{Diagrama de flujo del sistema de riego automatizado.}
       \label{fig:diagrama}
 \end{figure}
-
-\subsection{Diseño del Sistema}
 Como se muestra en la Figura \ref{fig:diagrama}, se diseñó un sistema de riego automatizado utilizando energía solar como fuente principal. El sistema regará las plantas dos veces al día, a las 7:00 a.m. y a las 6:00 p.m., durante un periodo de 5 minutos cada vez. Todos los componentes electrónicos estarán protegidos en una caja IP-65 (Figura \ref{fig:caja} del Anexo), asegurando resistencia al agua y al polvo.
 
 \subsection{Montaje del Sistema Eléctrico}
