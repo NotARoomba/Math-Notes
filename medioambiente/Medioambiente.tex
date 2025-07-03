@@ -12,20 +12,32 @@
 \usepackage{pgf-pie}
 
 
-%  CENTER TITLES ADD CHARTS FOR THE SURVEY
+%  ADD NUMBER ON FRONT
 \geometry{a4paper, margin=1in}
 \doublespacing
 \title{\large{\textbf{AquaSolar: Sistema de Riego Sostenible para Huertas}}}
 \author{Juan Andrés Del Toro R, Nathan Daniel Alspaugh y Juan Pablo Ortiz \\ Medio Ambiente, Colegio Real Royal School \\ Undécimo Grado \\ Lic. Corina Corpas Santofimio \\ 21 de mayo de 2025}
 \date{}
 \begin{document}
+% --- Force page number on the first page (top right) ---
+\makeatletter
+\let\oldtitle\maketitle
+\renewcommand{\maketitle}{
+      \oldtitle
+      \thispagestyle{fancy}
+      \fancyhf{} % Clear all headers/footers
+      \fancyhead[R]{\thepage} % Add page number at top right
+}
+\makeatother
+
+\maketitle % Now includes the page number
 \pagestyle{fancy}
 \cfoot{}
 \fancyhead{} % clear all header fields
 \fancyhead[LO,CE]{\textbf{AquaSolar:  Sistema de Riego Sostenible para Huertas
       }}
 \fancyhead[RO,RO]{\thepage}
-\maketitle
+% \maketitle
 
 \newpage
 \renewcommand{\thesection}{}
