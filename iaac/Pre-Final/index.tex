@@ -1,0 +1,324 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}  
+\usepackage{titling}  
+\usepackage{amsthm}
+\usepackage{enumitem} 
+\usepackage[margin=1in]{geometry}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\theoremstyle{plain}
+
+\usepackage{xpatch}
+\makeatletter
+\AtBeginDocument{\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}}
+\makeatother
+
+\pgfplotsset{compat=newest}
+
+\title{IAAC 2025 Pre-Final Round}
+\author{Nathan Alspaugh}
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+    \item[\textbf{Problem A.1}]
+
+          \begin{enumerate}[label=(\alph*)]
+              \item
+
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{|l|c|c|}
+                            \hline
+                            \textbf{Object}     & \textbf{Distance}             & \textbf{Mass}                  \\
+                            \hline
+                            Another Person      & 1 m                           & 70 kg                          \\
+                            \hline
+                            Truck on the Street & 3 m                           & 30,000 kg                      \\
+                            \hline
+                            Moon                & 385,000 km                    & $7.3 \times 10^{22}$ kg        \\
+                            \hline
+                            Jupiter             & $780 \times 10^6$ km          & $1.9 \times 10^{27}$ kg        \\
+                            \hline
+                            Alpha Centauri A    & 4.37 light-years              & $1.1 M_{\odot}$                \\
+                            \hline
+                            Andromeda Galaxy    & $2.5 \times 10^6$ light-years & $1.5 \times 10^{12} M_{\odot}$ \\
+                            \hline
+                        \end{tabular}
+                    \end{table}
+
+                    One solar mass $M_{\odot} = 2 \times 10^{30}$ kg.
+
+                    We can use the formula for gravitational force:
+                    \[
+                        F = G \frac{m_1 m_2}{r^2}
+                    \]
+                    where $G$ is the gravitational constant $6.674 \times 10^{-11} \text{ N m}^2/\text{kg}^2$, $m_1$ and $m_2$ are the masses of the two objects, and $r$ is the distance between the two objects.
+
+                    \begin{align*}
+                        F_{\text{person}}           & = G \frac{70 \text{ kg} \times 70 \text{ kg}}{(1 \text{ m})^2} = 3.270407 \times 10^{-7} \text{ N}                                                                                                                                                               \\
+                        F_{\text{truck}}            & = G \frac{70 \text{ kg} \times 30,000 \text{ kg}}{(3 \text{ m})^2} = 1.557337 \times 10^{-5} \text{ N}                                                                                                                                                           \\
+                        F_{\text{moon}}             & = G \frac{70 \text{ kg} \times 7.3 \times 10^{22} \text{ kg}}{(385,000 \text{ km})^2} = G \frac{70 \text{ kg} \times 7.3 \times 10^{22} \text{ kg}}{(385,000,000 \text{ m})^2} = 2.30093 \times 10^{-3} \text{ N}                                                \\
+                        F_{\text{jupiter}}          & = G \frac{70 \text{ kg} \times 1.9 \times 10^{27} \text{ kg}}{(780 \times 10^6 \text{ km})^2} = G \frac{70 \text{ kg} \times 1.9 \times 10^{27} \text{ kg}}{(780,000,000,000 \text{ m})^2} = 1.459043 \times 10^{-5} \text{ N}                                   \\
+                        m_{\text{alpha centauri a}} & = 1.1 \times 2 \times 10^{30} \text{ kg}   = 2.2 \times 10^{30} \text{ kg}                                                                                                                                                                                       \\
+                        d_{\text{lightyear}}        & = 9.461 \times 10^{15} \text{ m}                                                                                                                                                                                                                                 \\
+                        F_{\text{alpha centauri a}} & = G \frac{70 \text{ kg} \times 2.2 \times 10^{30} \text{ kg}}{(4.37 \text{ light-years})^2} = G \frac{70 \text{ kg} \times 2.2 \times 10^{30} \text{ kg}}{(4.37 \times 9.461 \times 10^{15} \text{ m})^2} = 6.012976 \times 10^{-12} \text{ N}                   \\
+                        m_{\text{andromeda galaxy}} & = 1.5 \times 10^{12} \times 2 \times 10^{30} \text{ kg} = 3 \times 10^{42} \text{ kg}                                                                                                                                                                            \\
+                        F_{\text{andromeda galaxy}} & = G \frac{70 \text{ kg} \times 3 \times 10^{42} \text{ kg}}{(2.5 \times 10^6 \text{ light-years})^2} = G \frac{70 \text{ kg} \times 3 \times 10^{42} \text{ kg}}{(2.5 \times 10^6 \times 9.461 \times 10^{15} \text{ m})^2} = 2.505364 \times 10^{-11} \text{ N} \\
+                    \end{align*}
+                    \text{I noticed that $780 \times  10^6$ is not in scientific notation so here is the other answer just in case there was a typo:}
+                    \begin{align*}
+                        F_{\text{jupiter}} & = G \frac{70 \text{ kg} \times 1.9 \times 10^{27} \text{ kg}}{(7.8 \times 10^6 \text{ km})^2} = G \frac{70 \text{ kg} \times 1.9 \times 10^{27} \text{ kg}}{(7,800,000,000 \text{ m})^2} = 1.45904 \times 10^{-1} \text{ N} \\
+                    \end{align*}
+              \item Order the gravitational forces from strongest to weakest:
+                    \begin{align*}
+                        F_{\text{moon}} & > F_{\text{truck}} > F_{\text{jupiter}} > F_{\text{person}} > F_{\text{andromeda galaxy}} > F_{\text{alpha centauri a}} \\
+                    \end{align*}
+                    in the case that jupiter's distance was $7.80 \times 10^6$ km, then the order would be:
+                    \begin{align*}
+                        F_{\text{jupiter}} & > F_{\text{moon}} > F_{\text{truck}} > F_{\text{person}} > F_{\text{andromeda galaxy}} > F_{\text{alpha centauri a}} \\
+                    \end{align*}
+              \item The objects that have a similar force despite being on a different scale are Jupiter and the truck, along with Alpha Centauri A and the Andromeda Galaxy.
+          \end{enumerate}
+    \item[\textbf{Problem A.2}]
+          The star's apparent pulsation period is 6 days and the apparent magnitude is 6.5. From this we can find the absolute magnitude of the star with the formula:
+          \[
+              M = -2.43 * (\log_{10}(T)-1) -4.05
+          \]
+          Plugging in the period we get:
+          \[
+              M = -2.43 * (\log_{10}(6)-1) -4.05 = -3.510907
+          \]
+          Now with the absolute magnitude we can find the distance to the star with the formula:
+          \[
+              d = 10^{1 + \frac{m - M}{5}} = 10^{1 + \frac{6.5 - (-3.510907)}{5}} = 10^{1 + \frac{10.010907}{5}} = 10^{1 + 2.0021814} = 10^{3.0021814} = 1016.2 \text{ pc}
+          \]
+    \item[\textbf{Problem B.1}]
+          \begin{enumerate}[label=(\alph*)]
+              \item We can first find the number of stars in the shell by finding the volume and then multiplying by the density. (assuming that r is in lightyears)
+                    \begin{equation*}
+                        V_{outer} = \frac{4}{3}\pi (r+dr)^3 - \frac{4}{3}\pi r^3
+                    \end{equation*}
+                    \begin{equation*}
+                        V_{outer} = \frac{4}{3}\pi ((r+dr)^3 - r^3)
+                    \end{equation*}
+                    \begin{equation*}
+                        V_{outer} = \frac{4}{3}\pi (r^3 + 3r^2dr + 3rdr^2 + dr^3 - r^3)
+                    \end{equation*}
+                    \begin{equation*}
+                        V_{outer} = \frac{4}{3}\pi (3r^2dr + 3rdr^2 + dr^3)
+                    \end{equation*}
+                    \begin{equation*}
+                        V_{outer} = 4\pi r^2dr + 4\pi rdr^2 + \frac{4}{3}\pi dr^3
+                    \end{equation*}
+                    \begin{equation*}
+                        \Delta N(r) = 0.004 \frac{stars}{ly^3} \times (4\pi r^2dr + 4\pi rdr^2 + \frac{4}{3}\pi dr^3) ly^3
+                    \end{equation*}
+                    \begin{equation*}
+                        \Delta N(r) = \frac{2}{125}(\pi r^2dr + \pi rdr^2 + \frac{1}{3}\pi dr^3) stars
+                    \end{equation*}
+
+                    With each star giving off $3.6 \times 10^{26}$ watts of energy, we can find the total energy given off by the stars in the shell by multiplying the number of stars by the energy given off by each star. Then using the inverse square law we can find the power that reaches the Earth. The formula for the power from the shell is:
+                    \begin{equation*}
+                        \Delta P(r) = \frac{2}{125}(\pi r^2dr + \pi rdr^2 + \frac{1}{3}\pi dr^3) stars \times 3.6 \times 10^{26} \frac{watts}{star}
+                    \end{equation*}
+                    \begin{equation*}
+                        \Delta P(r) = 1.6 \times 10^{-2} \times (\pi r^2dr + \pi rdr^2 + \frac{1}{3}\pi dr^3) \times 3.6 \times 10^{26} watts
+                    \end{equation*}
+                    \begin{equation*}
+                        \Delta P(r) = 5.76 \times 10^{24} \times (\pi r^2dr + \pi rdr^2 + \frac{1}{3}\pi dr^3) watts
+                    \end{equation*}
+                    Now we can find the power that reaches the Earth by using the inverse square law:
+                    \begin{equation*}
+                        I(r) = \frac{P(r)}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \frac{5.76 \times 10^{24} \times (\pi r^2dr + \pi rdr^2 + \frac{1}{3}\pi dr^3)}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \frac{1.44 \times 10^{21} \times (r^2dr + rdr^2 + \frac{1}{3} dr^3)}{r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    Now this can be simplified to:
+                    \begin{equation*}
+                        I(r) = 1.44 \times 10^{21} \times (dr + \frac{dr^2}{r} + \frac{1}{3} \frac{dr^3}{r^3}) \frac{watts}{m^2}
+                    \end{equation*}
+              \item Now finding an expression for the total power $P(r)$ given off by all the stars in the radius, we can get the volume of the sphere and multiply by the density of stars and then multiply by the energy given off by each star.
+                    \begin{equation*}
+                        V(r) = \frac{4}{3}\pi r^3
+                    \end{equation*}
+                    \begin{equation*}
+                        P(r) = 0.004 \frac{stars}{ly^3} * \frac{4}{3}\pi r^3 ly^3 * 3.6 \times 10^{26} \frac{watts}{star}
+                    \end{equation*}
+                    \begin{equation*}
+                        P(r) = \frac{2}{375}(\pi r^3) * 3.6 \times 10^{26} watts
+                    \end{equation*}
+                    \begin{equation*}
+                        P(r) = 5.33 \times 10^{-3} (\pi r^3) * 3.6 \times 10^{26} watts
+                    \end{equation*}
+                    \begin{equation*}
+                        P(r) = r^3 * 6.02808 \times 10^{24} watts
+                    \end{equation*}
+                    Then using the inverse square law we can find the power that reaches the Earth:
+                    \begin{equation*}
+                        I(r) = \frac{P(r)}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \frac{6.02808 \times 10^{24}}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \frac{r^3}{4r^2} * 1.918797 \times 10^{24} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = r * 3.76755 \times 10^{23} \frac{watts}{m^2}
+                    \end{equation*}
+              \item As $r \rightarrow \infty$, the power received by the Earth from all the stars can be expressed as:
+                    \begin{equation*}
+                        I(r) = \lim_{r \rightarrow \infty}  \frac{P(r)}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \lim_{r \rightarrow \infty}  \frac{r^3 * 6.02808 \times 10^{24}}{4\pi r^2} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \lim_{r \rightarrow \infty}  \frac{r^3}{4\pi r^2} * 6.02808 \times 10^{24} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \lim_{r \rightarrow \infty}  \frac{r}{4\pi} * 6.02808 \times 10^{24} \frac{watts}{m^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        I(r) = \infty
+                    \end{equation*}
+                    This is however incorrect because the universe is not infinite and is expanding at an accelerated rate. This means that eventually the light that is emitted from the stars will never reach the Earth.
+
+
+              \item Modern cosmology is relevant for correctly interpreting this result because if the universe is infinite and there are an infinite number of stars, then the earth would not be able to sustain life and we would not have any concept of "night". It is because of modern cosmology that we created the Big Bang model which explains the origin of the universe and the expansion of the universe.
+          \end{enumerate}
+    \item[\textbf{Problem B.2}]
+          \begin{enumerate}[label=(\alph*)]
+              \item The equation for kinetic and potential energy is:
+                    \begin{equation*}
+                        K = \frac{1}{2}mv^2
+                    \end{equation*}
+                    \begin{equation*}
+                        U = -m g h
+                    \end{equation*}
+                    but we don't have gravity but we have the density $\rho$ and radius of the celestial body $r$. We can find the acceleration due to gravity $g$ with the formula:
+                    \begin{equation*}
+                        g = -\frac{G M}{r^2}
+                    \end{equation*}
+                    where $M$ is the mass of the celestial body. We can find this using the density and the radius of the celestial body:
+                    \begin{equation*}
+                        M = \rho \frac{4}{3}\pi r^3
+                    \end{equation*}
+                    rearranging the equation for $g$ we get:
+                    \begin{equation*}
+                        g = -\frac{4G \rho \pi r^3}{3r^2}
+                    \end{equation*}
+                    \begin{equation*}
+                        g = -\frac{4G \rho \pi r}{3}
+                    \end{equation*}
+                    now we can find the potential energy with this, where $r$ is the distance from the center of the universe:
+                    \begin{equation*}
+                        U = -m \frac{4G \rho \pi r}{3} r
+                    \end{equation*}
+                    \begin{equation*}
+                        U = -\frac{4}{3}G m \rho \pi r^2
+                    \end{equation*}
+                    now we can find the kinetic energy with the non-relativistic form of Hubbles law:
+                    \begin{equation*}
+                        v(t) = H(t) * r(t)
+                    \end{equation*}
+                    \begin{equation*}
+                        K = \frac{1}{2}m(H(t)r(t))^2
+                    \end{equation*}
+              \item Now we can find the total energy:
+                    \begin{equation*}
+                        E = K + U
+                    \end{equation*}
+                    \begin{equation*}
+                        E = \frac{1}{2}m H^2r^2 - \frac{4}{3}G m \rho \pi r^2
+                    \end{equation*}
+                    We can rewrite $H^2$ as:
+                    \begin{equation*}
+                        H^2 = \frac{8\pi G \rho}{3}
+                    \end{equation*}
+                    \begin{equation*}
+                        E = \frac{1}{2}m \frac{8\pi G \rho}{3}r^2 - \frac{4}{3}G m \rho \pi r^2
+                    \end{equation*}
+                    this then becomes:
+                    \begin{equation*}
+                        E = \frac{4}{3}m \pi G \rho_1 r^2 - \frac{4}{3}G m \rho_2 \pi r^2
+                    \end{equation*}
+                    simplifying this we get:
+                    \begin{equation*}
+                        E = \frac{4}{3}\pi G m   r^2 (\rho_1 - \rho_2)
+                    \end{equation*}
+                    which looks like:
+                    \begin{equation*}
+                        E = \frac{4}{3}\pi G m   r^2 (\rho_c - \rho)
+                    \end{equation*}
+                    assuming $\rho_1 = \rho_c$ and $\rho$ is the density of the universe, we can rearrange the equation to get:
+                    \begin{equation*}
+                        \rho_c = \frac{3E}{4\pi G m r^2} + \rho
+                    \end{equation*}
+              \item For the scenario where $\rho < \rho_c$ the universe will expand forever.
+                    For the scenario where $\rho > \rho_c$ the universe will eventually collapse.
+                    For the scenario where $\rho = \rho_c$ the universe will expand forever but at a decreasing rate.
+              \item Deriving the first non-relativistic Friedmann equation with some constant $k$:
+                    \begin{equation*}
+                        H^2 = \frac{8\pi G \rho}{3} - \frac{k}{r^2}
+                    \end{equation*}
+                    starting from the formula for total energy:
+                    \begin{equation*}
+                        E = \frac{1}{2}m H^2r^2 - \frac{4}{3}G m \rho \pi r^2
+                    \end{equation*}
+                    we can simplify this to:
+                    \begin{equation*}
+                        \frac{E}{m} = \frac{1}{2}H^2r^2 - \frac{4}{3}G \rho \pi r^2
+                    \end{equation*}
+                    $\frac{E}{m}$ is constant so we can rename it to $k$:
+                    \begin{equation*}
+                        k = \frac{1}{2}H^2r^2 - \frac{4}{3}G \rho \pi r^2
+                    \end{equation*}
+                    rearranging the equation we get:
+                    \begin{equation*}
+                        \frac{1}{2}H^2r^2 =  \frac{4}{3}G \rho \pi r^2 + k
+                    \end{equation*}
+                    \begin{equation*}
+                        H^2r^2 =  \frac{8}{3}G \rho \pi r^2 + 2k
+                    \end{equation*}
+                    \begin{equation*}
+                        H^2 = \frac{8 \pi G \rho}{3}  + \frac{2k}{r^2}
+                    \end{equation*}
+                    redefining $k$ as $\frac{2E}{m}$ we get:
+                    \begin{equation*}
+                        H^2 = \frac{8 \pi G \rho}{3}  + \frac{k}{r^2}
+                    \end{equation*}
+
+
+
+          \end{enumerate}
+    \item[\textbf{Problem C.1}]
+          \begin{enumerate}[label=(\alph*)]
+              \item The objects in the Local Group that are most relevant for determining collision probabilities would include M33 and the Large Magellanic Cloud. The text states that M33 increases the merger probability but then including the Large Magellanic Cloud would make their merger less likely. SMC is mentioned having 10\% of the mass of LMC but has no effect on the merger rate. The physical processes that affect the merge include the gravitational force between the galaxies, their dynamical friction, concentrations, and velocity distribution. There are also other factors such as gas drag and star formation that would affect the final stages of a merge including dark matter.
+              \item The first column of the table is the name of the galaxy, the second column is the mass in terms of $M_{200}$, the third column shows the concentrations of each body, the fourth column shows the distance moduli, the fifth column shows motion in right ascension ($\mu_{\alpha}$), the sixth shows motion in declination ($\mu_{\delta}$), and the seventh column shows the line of sight velocity ($v_{los}$).
+              \item Figure 1 shows probability densities for the position of the Milky Way and M31 in $kpc$ and the second figure shows the distance between the MW and M31 with respect to time ($Gyr$).
+              \item The addition of M33 increases the probability of the MW-M31 merger to ~$\frac{2}{3}$ (MW-M31-M33). However, the addition of the LMC results in a merger in more than $\frac{1}{3}$ of the cases (MW-M31-LMC). The merger probability when including both M33 and LMC is ~50\% (MW-M31-M33-LMC).
+              \item The likelihood of a merger between the MW and M31 is  $<2.5\%$ within 5 years assuming a threshold of 20 kpc.
+              \item Gravity Softening is a measure (in kpc) taking into account the fact that halos are extended objects. A softening that is too small leads to "unphysical hard scattering events during close encounters" and a softening that is too large "artificially reduced the gravitational force".
+          \end{enumerate}
+    \item[\textbf{Problem C.2}]
+          \begin{enumerate}[label=(\alph*)]
+              \item A \textit{trans-Neptunian object} is an object that orbits the sun beyond the orbit of Neptune. TNOs have perihelia $q < 40 au$ and their orbits are strongly influenced by Neptune. Perihelion distance is the distance from the sun to the closest point in the orbit of the object. \textit{Perihelion distance} is the distance from the sun to the closest point in the orbit of the object. The \textit{Semi-major axis} is the average distance from the sun to the object.
+              \item Sedna-like objects are a type of celestial body with large semi-major axis ($a > 200 au$) and large perihelia ($q > 60 au$). Ammonite is considered a Sedna-like object because it has a semi-major axis of $252 au$ and a perihelion distance of $66 au$.
+              \item The \textit{perihelion gap} is a region of orbital parameters among TNOs with $150 < a < 600 au$ and $50 < q < 75 au$. Ammonite is important for it because it is the first TNO to fall into the gap while having $ 150 < a < 200 au$.
+              \item Ammonite's orbit is different from the other TNOs because it lies in an area where no other large TNOs have been found as it falls outside the proposed $\varpi$ clustering of large-q objects. Its longitude of perihelion is in the opposite direction of other Sedna-like objects.
+              \item Ammonite provides evidence for an event that raised the perihelia of a primordial cluster. These findings come with a confidence level of 97\%.
+              \item Some challenges that the team faced were that in 2023, all of the recovery time was lost due to technical issues. The team also had an issue while determining the perihelion distance of Ammonite due to the slow movement of TNOs.
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
